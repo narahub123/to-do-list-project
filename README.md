@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-=======
 # to-do-list-project
 ## DAY 01 : 프로젝트 계획
 ### 프로젝트: 주간, 일간 할일를 작성할 수 있는 앱 
@@ -23,4 +13,3 @@ Currently, two official plugins are available:
 #### - 일간 할일 목록 
 #### - 일간 할일 세부 사항 - 수정, 삭제 
 
->>>>>>> ac796b0d4d55e73039f725ed399acd06eea58885
