@@ -28,4 +28,4 @@
 
 ## DAY 01 : Sidebar
 
-<img src="https://github.com/narahub123/to-do-list-project/issues/1#issue-2141541867">
+![sidebar](https://github.com/narahub123/to-do-list-project/assets/93567002/64cef948-c121-4281-8c99-e25106e9b152)
