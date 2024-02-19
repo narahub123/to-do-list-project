@@ -4,7 +4,9 @@ export default function NewWeeklyPlan() {
   return (
     <div className="w-[35rem] mt-16">
       <div>
-        <p>Weekly Plan</p>
+        <p className="text-center font-bold uppercase md:text-xl text-stone-900">
+          Weekly Plan
+        </p>
         <Input label="From" type="date" />
         <Input label="To" type="date" />
         <Input label="Subject" type="text" />
