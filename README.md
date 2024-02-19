@@ -39,3 +39,8 @@
 #### - 오늘 할일을 입력한 유저는 밝게 입력안한 유저는 흐리게 처리할 예정
 
 ![sidebar](https://github.com/narahub123/to-do-list-project/assets/93567002/64cef948-c121-4281-8c99-e25106e9b152)
+
+## 240219 DAY 01 : NewWeeklyPlan 
+### Weekly Plan 
+#### - 기존에 입력된 계획이 있다면 주간 계획이 뜨고 없다면 계획 폼이 보이게 할 예정 
+#### - 
