@@ -40,7 +40,12 @@
 
 ![sidebar](https://github.com/narahub123/to-do-list-project/assets/93567002/64cef948-c121-4281-8c99-e25106e9b152)
 
-## 240219 DAY 01 : NewWeeklyPlan 
-### Weekly Plan 
-#### - 기존에 입력된 계획이 있다면 주간 계획이 뜨고 없다면 계획 폼이 보이게 할 예정 
-#### - 
+## 240219 DAY 01 : NewWeeklyPlan
+
+### Weekly Plan
+
+#### - 기존에 입력된 계획이 있다면 주간 계획이 뜨고 없다면 계획 폼이 보이게 할 예정
+
+![108](https://github.com/narahub123/to-do-list-project/assets/93567002/88cf996d-1717-47ea-b829-03a47a18fcfe)
+
+#### -
