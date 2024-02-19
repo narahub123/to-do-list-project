@@ -52,7 +52,7 @@
 
 #### - 17: 29 useRef()에 대한 이해가 더 필요함
 
-#### Accordian Study
+#### - Accordian Study
 
 ![110](https://github.com/narahub123/to-do-list-project/assets/93567002/b8fc1d9a-65be-4f2e-a96d-2204e70eb4af)
 
