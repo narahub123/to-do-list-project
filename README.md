@@ -54,6 +54,7 @@
 
 #### - Accordian Study
 
+[![Accordian](https://img.youtube.com/vi/dciqfn6vRxc/0.jpg)](https://www.youtube.com/watch?v=dciqfn6vRxc)
 ![110](https://github.com/narahub123/to-do-list-project/assets/93567002/b8fc1d9a-65be-4f2e-a96d-2204e70eb4af)
 
 #### - TroubleShot 23: 05 accordian 공부 중 에러 발생 - h-screen 때문에 발생한 듯

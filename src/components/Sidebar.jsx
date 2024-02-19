@@ -1,5 +1,5 @@
 import Button from "./Button";
-import Accordian, { AccordianItem } from "../study/Accordian";
+import Accordian, { AccordianItem } from "./Accordian";
 
 export default function Sidebar({ onStartAddProject, plans }) {
   // calculate week number of the date
@@ -20,30 +20,9 @@ export default function Sidebar({ onStartAddProject, plans }) {
           Your Weekly Plans
         </h3>
         <ul>
-          <Accordian className="max-w-lg">
-            <AccordianItem value="1" trigger="Accordian Item 1">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-              saepe delectus dolores libero dolore, voluptatem consequuntur
-              nostrum itaque nulla ullam! Soluta possimus laboriosam officia
-              alias tempora aperiam vel quibusdam tempore.
-            </AccordianItem>
-            <AccordianItem value="2" trigger="Accordian Item 2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-              saepe delectus dolores libero dolore, voluptatem consequuntur
-              nostrum itaque nulla ullam! Soluta possimus laboriosam officia
-              alias tempora aperiam vel quibusdam tempore.
-            </AccordianItem>
-            <AccordianItem value="3" trigger="Accordian Item 3">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-              saepe delectus dolores libero dolore, voluptatem consequuntur
-              nostrum itaque nulla ullam! Soluta possimus laboriosam officia
-              alias tempora aperiam vel quibusdam tempore.
-            </AccordianItem>
-            <AccordianItem value="4" trigger="Accordian Item 4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-              saepe delectus dolores libero dolore, voluptatem consequuntur
-              nostrum itaque nulla ullam! Soluta possimus laboriosam officia
-              alias tempora aperiam vel quibusdam tempore.
+          <Accordian>
+            <AccordianItem value="1" trigger="Accodian item 1">
+              aaa
             </AccordianItem>
           </Accordian>
         </ul>
