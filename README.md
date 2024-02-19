@@ -49,4 +49,13 @@
 ![108](https://github.com/narahub123/to-do-list-project/assets/93567002/88cf996d-1717-47ea-b829-03a47a18fcfe)
 
 #### - 16:24 useState()를 이용한 화면 변경 완료 : 이해가 더 필요함
-#### - 17: 29 useRef()에 대한 이해가 더 필요함 
+
+#### - 17: 29 useRef()에 대한 이해가 더 필요함
+
+#### Accordian Study
+
+![110](https://github.com/narahub123/to-do-list-project/assets/93567002/b8fc1d9a-65be-4f2e-a96d-2204e70eb4af)
+
+#### - TroubleShot 23: 05 accordian 공부 중 에러 발생 - h-screen 때문에 발생한 듯
+
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/971a3c29-d475-4e50-a015-15d9c3696884)

@@ -1,4 +1,5 @@
 import Button from "./Button";
+import Accordian, { AccordianItem } from "../study/Accordian";
 
 export default function Sidebar({ onStartAddProject, plans }) {
   // calculate week number of the date
@@ -18,12 +19,46 @@ export default function Sidebar({ onStartAddProject, plans }) {
         <h3 className="mb-8 font-bold uppercase md:text-xl text-stone-200">
           Your Weekly Plans
         </h3>
+        <ul>
+          <Accordian className="max-w-lg">
+            <AccordianItem value="1" trigger="Accordian Item 1">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              saepe delectus dolores libero dolore, voluptatem consequuntur
+              nostrum itaque nulla ullam! Soluta possimus laboriosam officia
+              alias tempora aperiam vel quibusdam tempore.
+            </AccordianItem>
+            <AccordianItem value="2" trigger="Accordian Item 2">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              saepe delectus dolores libero dolore, voluptatem consequuntur
+              nostrum itaque nulla ullam! Soluta possimus laboriosam officia
+              alias tempora aperiam vel quibusdam tempore.
+            </AccordianItem>
+            <AccordianItem value="3" trigger="Accordian Item 3">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              saepe delectus dolores libero dolore, voluptatem consequuntur
+              nostrum itaque nulla ullam! Soluta possimus laboriosam officia
+              alias tempora aperiam vel quibusdam tempore.
+            </AccordianItem>
+            <AccordianItem value="4" trigger="Accordian Item 4">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              saepe delectus dolores libero dolore, voluptatem consequuntur
+              nostrum itaque nulla ullam! Soluta possimus laboriosam officia
+              alias tempora aperiam vel quibusdam tempore.
+            </AccordianItem>
+          </Accordian>
+        </ul>
         <ul className="mb-8">
           {plans.map((plan) => {
             let weekNumber = handleWeekNumber(plan.from);
             return (
               <li key={plan.planId}>
-                <button className="w-full text-left px-2 py-1 rounded-sm my-1 text-stone-400 hover:text-stone-200 hover:bg-stone-800">
+                <button className="w-full text-left py-1 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800">
+                  {plan.from.split("-")[0]}
+                </button>
+                <button className="w-full text-left px-2 py-1 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800">
+                  {plan.from.split("-")[1]}
+                </button>
+                <button className="w-full text-left px-4 py-1 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800">
                   week{weekNumber}
                 </button>
               </li>
