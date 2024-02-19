@@ -20,13 +20,15 @@ function App() {
 
   function handleAddPlan(planData) {
     setPlanState((prevState) => {
+      const planId = Math.random();
       const newPlan = {
         ...planData,
-        id: Math.random(),
+        id: planId,
       };
 
       return {
         ...prevState,
+        selectedPlanId: undefined,
         plans: [...prevState.plans, newPlan],
       };
     });
@@ -45,7 +47,10 @@ function App() {
   return (
     <>
       <main className="h-screen my-8 flex gap-8">
-        <Sidebar onStartAddProject={handleStartAddPlan} />
+        <Sidebar
+          onStartAddProject={handleStartAddPlan}
+          plans={planState.plans}
+        />
         {content}
       </main>
     </>

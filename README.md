@@ -49,3 +49,4 @@
 ![108](https://github.com/narahub123/to-do-list-project/assets/93567002/88cf996d-1717-47ea-b829-03a47a18fcfe)
 
 #### - 16:24 useState()를 이용한 화면 변경 완료 : 이해가 더 필요함
+#### - 17: 29 useRef()에 대한 이해가 더 필요함 
