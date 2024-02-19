@@ -1,4 +1,5 @@
 import noPlanImg from "../assets/calendar-x.svg";
+import Button from "./Button";
 
 export default function NoPlanSet() {
   return (
@@ -11,7 +12,7 @@ export default function NoPlanSet() {
       <h2 className="text-xl font-bold text-stone-500 my-4">No Plan Set</h2>
       <p className="text-stone-400 mb-4">Get started with a new plan</p>
       <p className="mt-8">
-        <button>Create a new plan</button>
+        <Button>Create a new plan</Button>
       </p>
     </div>
   );
