@@ -13,4 +13,4 @@
 #### - 일간 할일 목록 
 #### - 일간 할일 세부 사항 - 수정, 삭제 
 ## DAY 01 : Sidebar 
-
+https://github.com/narahub123/to-do-list-project/issues/1#issue-2141541867
