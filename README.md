@@ -1,6 +1,6 @@
 # to-do-list-project
 
-## DAY 01 : 프로젝트 계획
+## 240219 DAY 01 : 프로젝트 계획
 
 ### 프로젝트: 주간, 일간 할일를 작성할 수 있는 앱
 
@@ -27,5 +27,15 @@
 #### - 일간 할일 세부 사항 - 수정, 삭제
 
 ## DAY 01 : Sidebar
+
+### 디자인은 React 완벽 가이드 Section 9 연습 프로젝트를 참고함
+
+### 240219 Your Weekly Plans
+
+#### - Add Plan을 누르면 우측의 공간에 주간 일정 form 이 생기고 그 form을 입력하고 저장하면 your weekly plans 안에 주간 일정이 삽입되게 할 예정
+
+### OTHER USER'S PLAN
+
+#### - 오늘 할일을 입력한 유저는 밝게 입력안한 유저는 흐리게 처리할 예정
 
 ![sidebar](https://github.com/narahub123/to-do-list-project/assets/93567002/64cef948-c121-4281-8c99-e25106e9b152)
