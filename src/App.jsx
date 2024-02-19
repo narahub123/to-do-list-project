@@ -19,6 +19,16 @@ function App() {
                       <li>week5</li>
                     </ul>
                   </li>
+                  <li>
+                    2월
+                    <ul>
+                      <li>week1</li>
+                      <li>week2</li>
+                      <li>week3</li>
+                      <li>week4</li>
+                      <li>week5</li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
             </ul>
