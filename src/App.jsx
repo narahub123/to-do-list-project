@@ -18,13 +18,29 @@ function App() {
     });
   } // handleStartAddPlan() ends
 
+  function handleAddPlan(planData) {
+    setPlanState((prevState) => {
+      const newPlan = {
+        ...planData,
+        id: Math.random(),
+      };
+
+      return {
+        ...prevState,
+        plans: [...prevState.plans, newPlan],
+      };
+    });
+  } // handleAddPlan() ends
+
+  console.log(planState);
+
   let content;
 
   if (planState.selectedPlanId === null) {
-    content = <NewWeeklyPlan />;
+    content = <NewWeeklyPlan onAdd={handleAddPlan} />;
   } else if (planState.selectedPlanId === undefined) {
     content = <NoPlanSet onStartAddProject={handleStartAddPlan} />;
-  }
+  } // if ends
 
   return (
     <>
