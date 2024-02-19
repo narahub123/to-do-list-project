@@ -26,11 +26,11 @@
 
 #### - 일간 할일 세부 사항 - 수정, 삭제
 
-## DAY 01 : Sidebar
+## 240219 DAY 01 : Sidebar
 
-### 디자인은 React 완벽 가이드 Section 9 연습 프로젝트를 참고함
+#### 디자인은 React 완벽 가이드 Section 9 연습 프로젝트를 참고함
 
-### 240219 Your Weekly Plans
+### Your Weekly Plans
 
 #### - Add Plan을 누르면 우측의 공간에 주간 일정 form 이 생기고 그 form을 입력하고 저장하면 your weekly plans 안에 주간 일정이 삽입되게 할 예정
 
