@@ -76,3 +76,9 @@
 #### - 추가되는 일정이 기존 일정과 중첩되는 경우 사이드바 리스트가 추가되는 것이 아닌 리스트안에 추가하는 방법
 
 #### - 같은 주간 일정 중 시작일과 종료일이 다른 경우 구별 방법
+
+### Accordion Study II
+
+#### 중첩된 아코디언을 찾다가 아코디언을 더 쉽게 작성할 수 있는 영상을 찾음
+
+[![Accordian](https://img.youtube.com/vi/oOXExNA8A48/0.jpg)](https://www.youtube.com/watch?v=oOXExNA8A48)
