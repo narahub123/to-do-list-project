@@ -52,7 +52,7 @@
 
 #### - 17: 29 useRef()에 대한 이해가 더 필요함
 
-#### - Accordian Study
+#### - Accordion Study
 
 [![Accordian](https://img.youtube.com/vi/dciqfn6vRxc/0.jpg)](https://www.youtube.com/watch?v=dciqfn6vRxc)
 ![110](https://github.com/narahub123/to-do-list-project/assets/93567002/b8fc1d9a-65be-4f2e-a96d-2204e70eb4af)
@@ -61,4 +61,4 @@
 
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/971a3c29-d475-4e50-a015-15d9c3696884)
 
-## Day 2 Accordian 완성하기 
+## Day 2 Accordion 완성하기
