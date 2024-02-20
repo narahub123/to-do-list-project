@@ -1,10 +1,10 @@
 import { useState } from "react";
 import React from "react";
 
-const Accordion = ({ title, answer, children }) => {
+const Accordion = ({ title, children }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
   return (
-    <div className="py-2  text-stone-900">
+    <div className="py-2">
       <button
         onClick={() => setAccordionOpen(!accordionOpen)}
         className="flex justify-between w-full"
@@ -13,14 +13,14 @@ const Accordion = ({ title, answer, children }) => {
         {accordionOpen ? <span>-</span> : <span>+</span>}
       </button>
       <div
-        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-500 text-sm ${
+        className={`grid overflow-hidden transition-all duration-300 ease-in-out text-slate-300 text-sm ${
           accordionOpen
             ? "grid-rows-[1fr] opacity-100"
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden">
-          {answer} <span>{children}</span>
+        <div className="overflow-hidden pl-2">
+          <span>{children}</span>
         </div>
       </div>
     </div>

@@ -20,13 +20,17 @@ export default function Sidebar({ onStartAddProject, plans }) {
           Your Weekly Plans
         </h3>
         <ul className="mb-3">
-          <li className="p-4 bg-gray-200 rounded-lg ">
-            <Accordion title="1 ? 2? " answer="1" />
-            <Accordion title="1 ? 2? " answer="1">
-              <Accordion title="3 ? 4? " answer="3" />
-            </Accordion>
-            <Accordion title="3 ? 4? " answer="3" />
-            <Accordion title="5 ? 6? " answer="5" />
+          <li>
+            {plans.map((plan) => {
+              let weekNumber = handleWeekNumber(plan.from);
+              return (
+                <Accordion title={plan.from.split("-")[0]}>
+                  <Accordion title={plan.from.split("-")[1]}>
+                    week {weekNumber}
+                  </Accordion>
+                </Accordion>
+              );
+            })}
           </li>
         </ul>
         {/* <ul className="mb-8">
