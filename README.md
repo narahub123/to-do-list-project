@@ -96,3 +96,4 @@
 ### react와 Node.js 연결
 
 #### 10:31 TroubleShooting - TypeError: Cannot destructure property 'from' of 'req.body' as it is undefined.
+#### Server.js에서 app.use(express.json()) 을 빼먹음..
