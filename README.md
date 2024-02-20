@@ -60,3 +60,5 @@
 #### - TroubleShot 23: 05 accordian 공부 중 에러 발생 - h-screen 때문에 발생한 듯
 
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/971a3c29-d475-4e50-a015-15d9c3696884)
+
+## Day 2 Accordian 완성하기 
