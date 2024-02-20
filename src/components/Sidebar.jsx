@@ -1,5 +1,5 @@
 import Button from "./Button";
-import Accordian, { AccordianItem } from "./Accordian";
+import Accordion, { AccordionItem } from "./Accordion";
 
 export default function Sidebar({ onStartAddProject, plans }) {
   // calculate week number of the date
@@ -20,18 +20,28 @@ export default function Sidebar({ onStartAddProject, plans }) {
           Your Weekly Plans
         </h3>
         <ul>
-          <Accordian>
-            <AccordianItem value="1" trigger="Accodian item 1">
-              aaa
-            </AccordianItem>
-          </Accordian>
+          <Accordion>
+            {plans.map((plan) => {
+              let weekNumber = handleWeekNumber(plan.from);
+              return (
+                <AccordionItem value="1" trigger={plan.from.split("-")[0]}>
+                  <AccordionItem value="2" trigger={plan.from.split("-")[1]}>
+                    <p className="w-full text-left px-4 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800">
+                      week{weekNumber}
+                    </p>
+                  </AccordionItem>
+                  <p className="w-full text-left px-2 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800"></p>
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
         </ul>
-        <ul className="mb-8">
+        {/* <ul className="mb-8">
           {plans.map((plan) => {
             let weekNumber = handleWeekNumber(plan.from);
             return (
               <li key={plan.planId}>
-                <button className="w-full text-left py-1 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800">
+                <button className="">
                   {plan.from.split("-")[0]}
                 </button>
                 <button className="w-full text-left px-2 py-1 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800">
@@ -43,7 +53,7 @@ export default function Sidebar({ onStartAddProject, plans }) {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
         <Button onClick={onStartAddProject}>+ Add Plan</Button>
       </section>
       <section>

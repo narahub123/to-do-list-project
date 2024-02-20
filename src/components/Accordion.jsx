@@ -1,9 +1,9 @@
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 
 // create a context to manage state for the Accorian component
-const AccordianContext = createContext();
+const AccordionContext = createContext();
 
-export default function Accordian({ value, children, onChange, ...props }) {
+export default function Accordion({ value, children, onChange, ...props }) {
   // managing state by selection
   const [selected, setSelected] = useState(value);
 
@@ -16,17 +16,17 @@ export default function Accordian({ value, children, onChange, ...props }) {
   return (
     //
     <ul {...props}>
-      <AccordianContext.Provider value={{ selected, setSelected }}>
+      <AccordionContext.Provider value={{ selected, setSelected }}>
         {children}
-      </AccordianContext.Provider>
+      </AccordionContext.Provider>
     </ul>
   );
-} // Accordian() ends
+} // Accordion() ends
 
-// AccordianItem
-export function AccordianItem({ children, value, trigger, ...props }) {
-  // get the selected state and setSelected function from the AccordianContext
-  const { selected, setSelected } = useContext(AccordianContext);
+// AccordionItem
+export function AccordionItem({ children, value, trigger, ...props }) {
+  // get the selected state and setSelected function from the AccordionContext
+  const { selected, setSelected } = useContext(AccordionContext);
 
   // determine if the current item is open based on selected value
   const open = selected === value;
@@ -47,4 +47,4 @@ export function AccordianItem({ children, value, trigger, ...props }) {
       </div>
     </li>
   );
-} // AccordianItem() ends
+} // AccordionItem() ends
