@@ -97,3 +97,4 @@
 
 #### 10:31 TroubleShooting - TypeError: Cannot destructure property 'from' of 'req.body' as it is undefined.
 #### Server.js에서 app.use(express.json()) 을 빼먹음..
+#### 24-02-21 from과 to의 schemaType을 date에서 String으로 변경 - YYYY-mm-dd로 입력해도 mongoDB에서 YYYY-mm-dd-HH-mm-ss형식으로 저장되기 때문에 
