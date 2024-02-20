@@ -22,6 +22,9 @@ export default function Sidebar({ onStartAddProject, plans }) {
         <ul className="mb-3">
           <li className="p-4 bg-gray-200 rounded-lg ">
             <Accordion title="1 ? 2? " answer="1" />
+            <Accordion title="1 ? 2? " answer="1">
+              <Accordion title="3 ? 4? " answer="3" />
+            </Accordion>
             <Accordion title="3 ? 4? " answer="3" />
             <Accordion title="5 ? 6? " answer="5" />
           </li>

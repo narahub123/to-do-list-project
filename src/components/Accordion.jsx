@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 
-const Accordion = ({ title, answer }) => {
+const Accordion = ({ title, answer, children }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
   return (
     <div className="py-2  text-stone-900">
@@ -19,7 +19,9 @@ const Accordion = ({ title, answer }) => {
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden">{answer}</div>
+        <div className="overflow-hidden">
+          {answer} <span>{children}</span>
+        </div>
       </div>
     </div>
   );
