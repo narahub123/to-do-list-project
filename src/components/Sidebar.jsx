@@ -1,5 +1,5 @@
 import Button from "./Button";
-import Accordion, { AccordionItem } from "./Accordion";
+import Accordion from "./Accordion";
 
 export default function Sidebar({ onStartAddProject, plans }) {
   // calculate week number of the date
@@ -19,22 +19,12 @@ export default function Sidebar({ onStartAddProject, plans }) {
         <h3 className="mb-8 font-bold uppercase md:text-xl text-stone-200">
           Your Weekly Plans
         </h3>
-        <ul>
-          <Accordion>
-            {plans.map((plan) => {
-              let weekNumber = handleWeekNumber(plan.from);
-              return (
-                <AccordionItem value="1" trigger={plan.from.split("-")[0]}>
-                  <AccordionItem value="2" trigger={plan.from.split("-")[1]}>
-                    <p className="w-full text-left px-4 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800">
-                      week{weekNumber}
-                    </p>
-                  </AccordionItem>
-                  <p className="w-full text-left px-2 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800"></p>
-                </AccordionItem>
-              );
-            })}
-          </Accordion>
+        <ul className="mb-3">
+          <li className="p-4 bg-gray-200 rounded-lg ">
+            <Accordion title="1 ? 2? " answer="1" />
+            <Accordion title="3 ? 4? " answer="3" />
+            <Accordion title="5 ? 6? " answer="5" />
+          </li>
         </ul>
         {/* <ul className="mb-8">
           {plans.map((plan) => {
