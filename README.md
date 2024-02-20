@@ -94,3 +94,5 @@
 ![113](https://github.com/narahub123/to-do-list-project/assets/93567002/f5b38345-c27e-4eff-bfe0-85d44bc7b938)
 
 ### react와 Node.js 연결
+
+#### 10:31 TroubleShooting - TypeError: Cannot destructure property 'from' of 'req.body' as it is undefined.
