@@ -96,5 +96,19 @@
 ### react와 Node.js 연결
 
 #### 10:31 TroubleShooting - TypeError: Cannot destructure property 'from' of 'req.body' as it is undefined.
+
 #### Server.js에서 app.use(express.json()) 을 빼먹음..
-#### 24-02-21 from과 to의 schemaType을 date에서 String으로 변경 - YYYY-mm-dd로 입력해도 mongoDB에서 YYYY-mm-dd-HH-mm-ss형식으로 저장되기 때문에 
+
+#### 24-02-21 from과 to의 schemaType을 date에서 String으로 변경 - YYYY-mm-dd로 입력해도 mongoDB에서 YYYY-mm-dd-HH-mm-ss형식으로 저장되기 때문에
+
+## DAY 3 월간 할일 CRUD 완성하기
+
+### 목표
+
+#### - 월간 할일 CRUD 완성하기
+
+#### - 월간 할일 불러올 때 연간, 월간, 주간으로 묶어서 가져오는 방법 생각해보기
+
+### 월간 할일 DB에서 불러오기
+
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/4bd7eb06-125c-4687-8bf2-7113b603e160)

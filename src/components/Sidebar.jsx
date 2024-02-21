@@ -20,18 +20,19 @@ export default function Sidebar({ onStartAddProject, plans }) {
           Your Weekly Plans
         </h3>
         <ul className="mb-3">
-          <li>
-            {plans.map((plan) => {
-              let weekNumber = handleWeekNumber(plan.from);
-              return (
-                <Accordion title={plan.from.split("-")[0]}>
-                  <Accordion title={plan.from.split("-")[1]}>
-                    week {weekNumber}
-                  </Accordion>
+          {plans.map((plan) => {
+            let weekNumber = handleWeekNumber(plan.from);
+            const year = plan.from.split("-")[0];
+            const month = plan.from.split("-")[1];
+            const key = plan._id;
+            return (
+              <li key={key}>
+                <Accordion title={year}>
+                  <Accordion title={month}>week {weekNumber}</Accordion>
                 </Accordion>
-              );
-            })}
-          </li>
+              </li>
+            );
+          })}
         </ul>
         {/* <ul className="mb-8">
           {plans.map((plan) => {

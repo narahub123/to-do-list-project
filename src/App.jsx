@@ -1,13 +1,19 @@
 import Sidebar from "./components/Sidebar";
 import NewWeeklyPlan from "./components/NewWeeklyPlan";
 import NoPlanSet from "./components/NoPlanSet";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { getAllWeeklyToDos } from "./components/HandleAPI";
 
 function App() {
   const [planState, setPlanState] = useState({
     selectedPlanId: undefined,
     plans: [],
   });
+
+  // show the list of data from db
+  useEffect(() => {
+    getAllWeeklyToDos(setPlanState);
+  }, []);
 
   function handleStartAddPlan() {
     setPlanState((prevState) => {
