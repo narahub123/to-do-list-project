@@ -1,12 +1,7 @@
 import { useState } from "react";
 import { updateWeeklyToDo } from "../util/HandleAPI";
 
-export default function SelectedWeeklyPlan({
-  plan,
-  onSelectPlan,
-  isUpdating,
-  setPlanState,
-}) {
+export default function SelectedWeeklyPlan({ plan, onSelectPlan, isUpdating }) {
   const [from, setFrom] = useState(plan.from);
   const [to, setTo] = useState(plan.to);
   const [subject, setSubject] = useState(plan.subject);
