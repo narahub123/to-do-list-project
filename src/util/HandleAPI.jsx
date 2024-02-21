@@ -33,4 +33,18 @@ const updateWeeklyToDo = (_id, from, to, subject, description) => {
     .catch((err) => console.log(err));
 };
 
-export { getAllWeeklyToDos, saveWeeklyToDo, updateWeeklyToDo };
+const deleteWeeklyToDo = (_id, setPlanState) => {
+  axios
+    .post(`${baseUrl}/delete`, { _id })
+    .then((data) => {
+      getAllWeeklyToDos(setPlanState);
+    })
+    .catch((err) => console.log(err));
+};
+
+export {
+  getAllWeeklyToDos,
+  saveWeeklyToDo,
+  updateWeeklyToDo,
+  deleteWeeklyToDo,
+};

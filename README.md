@@ -135,6 +135,20 @@
 
 #### - 수정 후 기존 페이지로 되돌아가기 추가 해야 함
 
+#### - 아직 언제 useState를 사용하고 언제 useRef를 사용하는 것이 좋은지가 명확하지 않음
+
 ![115](https://github.com/narahub123/to-do-list-project/assets/93567002/37cb04e3-0e20-49e5-adae-afcdf69ecc00)
 
-### 월간 할일 삭제하기
+### 월간 할일 삭제하기 24 02 22 01:47 완성
+
+![116](https://github.com/narahub123/to-do-list-project/assets/93567002/f4cd65eb-fdf3-4955-a25e-d2d5797305cc)
+
+## Day 4 코드 수정 하기
+
+#### - error handling
+
+#### - modal
+
+#### - validation
+
+#### - page navigation

@@ -1,7 +1,12 @@
 import { useState } from "react";
-import { updateWeeklyToDo } from "../util/HandleAPI";
+import { deleteWeeklyToDo, updateWeeklyToDo } from "../util/HandleAPI";
 
-export default function SelectedWeeklyPlan({ plan, onSelectPlan, isUpdating }) {
+export default function SelectedWeeklyPlan({
+  plan,
+  onSelectPlan,
+  isUpdating,
+  setPlanState,
+}) {
   const [from, setFrom] = useState(plan.from);
   const [to, setTo] = useState(plan.to);
   const [subject, setSubject] = useState(plan.subject);
@@ -25,6 +30,10 @@ export default function SelectedWeeklyPlan({ plan, onSelectPlan, isUpdating }) {
 
   const handleSave = () => {
     updateWeeklyToDo(plan._id, from, to, subject, description);
+  };
+
+  const handleDelete = () => {
+    deleteWeeklyToDo(plan._id, setPlanState);
   };
 
   return (
@@ -64,7 +73,10 @@ export default function SelectedWeeklyPlan({ plan, onSelectPlan, isUpdating }) {
                 Cancel
               </button>
             ) : (
-              <button className="text-stone-600 hover:text-stone-900">
+              <button
+                onClick={handleDelete}
+                className="text-stone-600 hover:text-stone-900"
+              >
                 DELETE
               </button>
             )}

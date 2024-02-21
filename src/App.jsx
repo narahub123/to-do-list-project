@@ -65,6 +65,7 @@ function App() {
       plan={selectedPlan}
       onSelectPlan={handleUpdateButton}
       isUpdating={planState.isUpdating}
+      setPlanState={setPlanState}
     />
   );
 
