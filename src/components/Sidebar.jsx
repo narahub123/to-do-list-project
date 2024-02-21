@@ -34,24 +34,6 @@ export default function Sidebar({ onStartAddProject, plans }) {
             );
           })}
         </ul>
-        {/* <ul className="mb-8">
-          {plans.map((plan) => {
-            let weekNumber = handleWeekNumber(plan.from);
-            return (
-              <li key={plan.planId}>
-                <button className="">
-                  {plan.from.split("-")[0]}
-                </button>
-                <button className="w-full text-left px-2 py-1 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800">
-                  {plan.from.split("-")[1]}
-                </button>
-                <button className="w-full text-left px-4 py-1 rounded-sm  text-stone-400 hover:text-stone-200 hover:bg-stone-800">
-                  week{weekNumber}
-                </button>
-              </li>
-            );
-          })}
-        </ul> */}
         <Button onClick={onStartAddProject}>+ Add Plan</Button>
       </section>
       <section>

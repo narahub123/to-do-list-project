@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import Input from "./Input";
-import { saveWeeklyToDo } from "../components/HandleAPI";
+import { saveWeeklyToDo } from "../util/HandleAPI";
 
 export default function NewWeeklyPlan() {
   const from = useRef();

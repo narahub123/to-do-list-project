@@ -2,7 +2,7 @@ import Sidebar from "./components/Sidebar";
 import NewWeeklyPlan from "./components/NewWeeklyPlan";
 import NoPlanSet from "./components/NoPlanSet";
 import { useEffect, useState } from "react";
-import { getAllWeeklyToDos } from "./components/HandleAPI";
+import { getAllWeeklyToDos } from "./util/HandleAPI";
 
 function App() {
   const [planState, setPlanState] = useState({

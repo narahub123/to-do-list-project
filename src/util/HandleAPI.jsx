@@ -19,4 +19,6 @@ const saveWeeklyToDo = (from, to, subject, description) => {
   });
 };
 
+const getSingleWeeklyToDo = () => {};
+
 export { getAllWeeklyToDos, saveWeeklyToDo };
