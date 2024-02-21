@@ -12,4 +12,11 @@ const getAllWeeklyToDos = (setPlanState) => {
   });
 };
 
-export { getAllWeeklyToDos };
+const saveWeeklyToDo = (from, to, subject, description) => {
+  console.log(from, to, subject, description);
+  axios.post(`${baseUrl}/save`, from, to, subject, description).then((data) => {
+    console.log(data);
+  });
+};
+
+export { getAllWeeklyToDos, saveWeeklyToDo };

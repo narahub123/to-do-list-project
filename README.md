@@ -112,3 +112,9 @@
 ### 월간 할일 DB에서 불러오기
 
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/4bd7eb06-125c-4687-8bf2-7113b603e160)
+
+### 월간 할일 DB에 추가 : 14:58
+
+#### - useRef를 이용해서 성공
+
+#### - db 추가 후 바로 사이드바에 반영되도록 하기

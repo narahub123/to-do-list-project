@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import Input from "./Input";
+import { saveWeeklyToDo } from "../components/HandleAPI";
 
-export default function NewWeeklyPlan({ onAdd }) {
+export default function NewWeeklyPlan() {
   const from = useRef();
   const to = useRef();
   const subject = useRef();
@@ -14,7 +15,7 @@ export default function NewWeeklyPlan({ onAdd }) {
     const enteredDescription = description.current.value;
 
     // pass the data back to app component
-    onAdd({
+    saveWeeklyToDo({
       from: enteredFrom,
       to: enteredTo,
       subject: enteredSubject,

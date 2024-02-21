@@ -45,7 +45,7 @@ function App() {
   let content;
 
   if (planState.selectedPlanId === null) {
-    content = <NewWeeklyPlan onAdd={handleAddPlan} />;
+    content = <NewWeeklyPlan />;
   } else if (planState.selectedPlanId === undefined) {
     content = <NoPlanSet onStartAddProject={handleStartAddPlan} />;
   } // if ends
