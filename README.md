@@ -125,7 +125,11 @@
 
 #### - 할일을 추가한 날짜도 model에 추가해야 할 듯
 
-### 월간 할일 상세 보기
+### 월간 할일 상세 보기 17:33 완성
+
+#### 기존 코드는 id를 Math.random()을 이용하는데 mongoDB의 _id를 이용하는 방법
+![114](https://github.com/narahub123/to-do-list-project/assets/93567002/6d1f4bd8-33e1-4bbf-a758-d8a2a4d3099a)
+
 
 ### 월간 할일 수정하기
 

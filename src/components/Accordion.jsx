@@ -1,7 +1,7 @@
 import { useState } from "react";
 import React from "react";
 
-const Accordion = ({ title, children }) => {
+const Accordion = ({ title, children, handleSelectedPlan }) => {
   const [accordionOpen, setAccordionOpen] = useState(false);
   return (
     <div className="py-2">
@@ -19,7 +19,7 @@ const Accordion = ({ title, children }) => {
             : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="overflow-hidden pl-2">
+        <div className="overflow-hidden pl-2" onClick={handleSelectedPlan}>
           <span>{children}</span>
         </div>
       </div>

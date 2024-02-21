@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Accordion from "./Accordion";
 
-export default function Sidebar({ onStartAddProject, plans }) {
+export default function Sidebar({ onStartAddPlan, plans, onSelectPlan }) {
   // calculate week number of the date
   function handleWeekNumber(date) {
     const dataObject = new Date(date);
@@ -25,16 +25,19 @@ export default function Sidebar({ onStartAddProject, plans }) {
             const year = plan.from.split("-")[0];
             const month = plan.from.split("-")[1];
             const key = plan._id;
+            console.log(key);
             return (
               <li key={key}>
                 <Accordion title={year}>
-                  <Accordion title={month}>week {weekNumber}</Accordion>
+                  <Accordion title={month}>
+                    <p onClick={() => onSelectPlan(key)}>week {weekNumber}</p>
+                  </Accordion>
                 </Accordion>
               </li>
             );
           })}
         </ul>
-        <Button onClick={onStartAddProject}>+ Add Plan</Button>
+        <Button onClick={onStartAddPlan}>+ Add Plan</Button>
       </section>
       <section>
         <h3 className="mt-8 mb-2 font-bold uppercase md:text-xl text-stone-200">
