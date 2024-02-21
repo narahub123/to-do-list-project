@@ -14,13 +14,23 @@ const getAllWeeklyToDos = (setPlanState) => {
 
 const saveWeeklyToDo = (from, to, subject, description) => {
   console.log(from, to, subject, description);
-  axios.post(`${baseUrl}/save`, from, to, subject, description).then((data) => {
-    console.log(data);
-    setPlanState({
-      selectedPlanId: data.data._id,
-      plans: data,
-    });
-  });
+  axios
+    .post(`${baseUrl}/save`, from, to, subject, description)
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((err) => console.log(err));
 };
 
-export { getAllWeeklyToDos, saveWeeklyToDo };
+const updateWeeklyToDo = (_id, from, to, subject, description) => {
+  console.log(_id, from, to, subject, description);
+
+  axios
+    .post(`${baseUrl}/update`, { _id, from, to, subject, description })
+    .then((data) => {
+      console.log("data", data);
+    })
+    .catch((err) => console.log(err));
+};
+
+export { getAllWeeklyToDos, saveWeeklyToDo, updateWeeklyToDo };

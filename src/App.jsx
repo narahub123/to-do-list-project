@@ -9,6 +9,7 @@ function App() {
   const [planState, setPlanState] = useState({
     selectedPlanId: undefined,
     plans: [],
+    isUpdating: false,
   });
 
   // show the list of data from db
@@ -21,11 +22,12 @@ function App() {
       return {
         ...prevState,
         selectedPlanId: null,
+        isUpdating: false,
       };
     });
   } // handleStartAddPlan() ends
 
-  console.log(planState);
+  // console.log(planState);
 
   function handleSelectPlan(id) {
     setPlanState((prevState) => {
@@ -33,6 +35,18 @@ function App() {
       return {
         ...prevState,
         selectedPlanId: id,
+        isUpdating: false,
+      };
+    });
+  } // handleSelectPlan() ends
+
+  function handleUpdateButton(id) {
+    setPlanState((prevState) => {
+      console.log("id", id);
+      return {
+        ...prevState,
+        selectedPlanId: id,
+        isUpdating: true,
       };
     });
   } // handleSelectPlan() ends
@@ -42,11 +56,18 @@ function App() {
     // console.log(plan._id === planState.selectedPlanId);
 
     // plan that is plan._id === planState.selectedPlanId
-    console.log(plan);
+    // console.log(plan);
     return plan._id === planState.selectedPlanId;
   });
 
-  let content = <SelectedWeeklyPlan plan={selectedPlan} />;
+  let content = (
+    <SelectedWeeklyPlan
+      plan={selectedPlan}
+      onSelectPlan={handleUpdateButton}
+      isUpdating={planState.isUpdating}
+      setPlanState={setPlanState}
+    />
+  );
 
   if (planState.selectedPlanId === null) {
     content = <NewWeeklyPlan />;

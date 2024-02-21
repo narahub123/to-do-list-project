@@ -25,7 +25,7 @@ export default function Sidebar({ onStartAddPlan, plans, onSelectPlan }) {
             const year = plan.from.split("-")[0];
             const month = plan.from.split("-")[1];
             const key = plan._id;
-            console.log(key);
+            // console.log(key);
             return (
               <li key={key}>
                 <Accordion title={year}>

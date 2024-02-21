@@ -21,7 +21,7 @@ export default function NewWeeklyPlan() {
       subject: enteredSubject,
       description: enteredDescription,
     });
-  }
+  } // handleSave()
 
   return (
     <div className="w-[35rem] mt-16">
