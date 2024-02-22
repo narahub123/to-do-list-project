@@ -26,7 +26,7 @@ const updateWeeklyToDo = (_id, from, to, subject, description) => {
   console.log(_id, from, to, subject, description);
 
   axios
-    .post(`${baseUrl}/update`, { _id, from, to, subject, description })
+    .patch(`${baseUrl}/update`, { _id, from, to, subject, description })
     .then((data) => {
       console.log("data", data);
     })
@@ -35,7 +35,7 @@ const updateWeeklyToDo = (_id, from, to, subject, description) => {
 
 const deleteWeeklyToDo = (_id, setPlanState) => {
   axios
-    .post(`${baseUrl}/delete`, { _id })
+    .delete(`${baseUrl}/delete`, { _id })
     .then((data) => {
       getAllWeeklyToDos(setPlanState);
     })
