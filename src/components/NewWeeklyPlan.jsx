@@ -2,7 +2,7 @@ import { useRef } from "react";
 import Input from "./Input";
 import { saveWeeklyToDo } from "../util/HandleAPI";
 
-export default function NewWeeklyPlan() {
+export default function NewWeeklyPlan({ setPlanState }) {
   const from = useRef();
   const to = useRef();
   const subject = useRef();
@@ -20,6 +20,7 @@ export default function NewWeeklyPlan() {
       to: enteredTo,
       subject: enteredSubject,
       description: enteredDescription,
+      setPlanState,
     });
   } // handleSave()
 

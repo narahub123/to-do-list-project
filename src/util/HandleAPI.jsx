@@ -12,30 +12,39 @@ const getAllWeeklyToDos = (setPlanState) => {
   });
 };
 
-const saveWeeklyToDo = (from, to, subject, description) => {
-  console.log(from, to, subject, description);
+const saveWeeklyToDo = ({ from, to, subject, description, setPlanState }) => {
+  console.log(from, to, subject, description, setPlanState);
   axios
-    .post(`${baseUrl}/save`, from, to, subject, description)
+    .post(`${baseUrl}/save`, { from, to, subject, description })
     .then((data) => {
       console.log(data);
+      getAllWeeklyToDos(setPlanState);
     })
     .catch((err) => console.log(err));
 };
 
-const updateWeeklyToDo = (_id, from, to, subject, description) => {
-  console.log(_id, from, to, subject, description);
+const updateWeeklyToDo = (
+  _id,
+  from,
+  to,
+  subject,
+  description,
+  setPlanState
+) => {
+  console.log(_id, from, to, subject, description, setPlanState);
 
   axios
     .patch(`${baseUrl}/update`, { _id, from, to, subject, description })
     .then((data) => {
       console.log("data", data);
+      getAllWeeklyToDos(setPlanState);
     })
     .catch((err) => console.log(err));
 };
 
 const deleteWeeklyToDo = (_id, setPlanState) => {
   axios
-    .delete(`${baseUrl}/delete`, { _id })
+    .delete(`${baseUrl}/delete`, { data: { _id } })
     .then((data) => {
       getAllWeeklyToDos(setPlanState);
     })

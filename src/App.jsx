@@ -70,7 +70,7 @@ function App() {
   );
 
   if (planState.selectedPlanId === null) {
-    content = <NewWeeklyPlan />;
+    content = <NewWeeklyPlan setPlanState={setPlanState} />;
   } else if (planState.selectedPlanId === undefined) {
     content = <NoPlanSet onStartAddProject={handleStartAddPlan} />;
   } // if ends

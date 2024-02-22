@@ -29,7 +29,7 @@ export default function SelectedWeeklyPlan({
   };
 
   const handleSave = () => {
-    updateWeeklyToDo(plan._id, from, to, subject, description);
+    updateWeeklyToDo(plan._id, from, to, subject, description, setPlanState);
   };
 
   const handleDelete = () => {

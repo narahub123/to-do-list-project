@@ -152,5 +152,9 @@
 #### - validation
 
 #### - page navigation, 사이드바에도 즉각적으로 반영
+#### - 0925 update 변경 
+![117](https://github.com/narahub123/to-do-list-project/assets/93567002/a102aa34-0bc3-43da-ae40-48be3b941666)
+#### - 1021 create 변경 
+![118](https://github.com/narahub123/to-do-list-project/assets/93567002/7dbec512-80b1-49ba-9dd3-c4bccf85bc91)
 
 #### - ~rest api 수정~ : 0909 기존 post method를 사용해서 수정, 삭제한 것을 patch와 delete로 변경
