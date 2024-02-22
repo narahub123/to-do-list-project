@@ -172,3 +172,8 @@
 #### 1709 wrapper를 이용해서 해결했지만 코드가 많아서 불만..
 
 ![120](https://github.com/narahub123/to-do-list-project/assets/93567002/65d74ddc-e57c-4f05-b86f-096004ea9d23)
+
+#### 2. 시작 날짜와 종료 날짜에 대한 유효성 검사 - 1821 완료 : useState()
+
+![121](https://github.com/narahub123/to-do-list-project/assets/93567002/ba8148ea-a26b-4885-a39c-9770efccdbb1)
+![122](https://github.com/narahub123/to-do-list-project/assets/93567002/fe59a43f-a017-4c39-90e7-cc5316539e24)

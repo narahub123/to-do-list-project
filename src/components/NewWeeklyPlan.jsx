@@ -1,9 +1,10 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Input from "./Input";
 import { saveWeeklyToDo } from "../util/HandleAPI";
 import ValidationModal from "../util/ValidationModal";
 
 export default function NewWeeklyPlan({ setPlanState }) {
+  const [isBigger, setIsBigger] = useState(false);
   const validationModal = useRef();
 
   const from = useRef();
@@ -17,7 +18,7 @@ export default function NewWeeklyPlan({ setPlanState }) {
     const enteredSubject = subject.current.value;
     const enteredDescription = description.current.value;
 
-    // vaildation
+    // vaildation for empty value
     if (
       enteredFrom.trim() === "" ||
       enteredTo.trim() === "" ||
@@ -25,6 +26,13 @@ export default function NewWeeklyPlan({ setPlanState }) {
       enteredDescription === ""
     ) {
       // show the validation modal
+      validationModal.current.open();
+      return;
+    }
+
+    // validation for dates
+    if (enteredFrom > enteredTo) {
+      setIsBigger(true);
       validationModal.current.open();
       return;
     }
@@ -43,12 +51,25 @@ export default function NewWeeklyPlan({ setPlanState }) {
     <>
       <ValidationModal ref={validationModal} buttonCaption="Okay">
         <h2 className="text-xl font-bold text-stone-700 my-4">Invalid Input</h2>
-        <p className="text-stone-600 mb-4">
-          Oops ... looks like you forget to enter a value
-        </p>
-        <p className="text-stone-600 mb-4">
-          Please make sure you provide a valid value for every input field
-        </p>
+        {isBigger ? (
+          <>
+            <p className="text-stone-600 mb-4">
+              Oop ... looks like you set due date earlier than starting date.
+            </p>
+            <p className="text-stone-600 mb-4">
+              Please make sure you set due date later than staring date.
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="text-stone-600 mb-4">
+              Oops ... looks like you forget to enter a value
+            </p>
+            <p className="text-stone-600 mb-4">
+              Please make sure you provide a valid value for every input field
+            </p>
+          </>
+        )}
       </ValidationModal>
       <div className="w-[35rem] mt-16">
         <div>

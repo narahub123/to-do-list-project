@@ -13,6 +13,7 @@ export default function SelectedWeeklyPlan({
   const [subject, setSubject] = useState(plan.subject);
   const [description, setDescription] = useState(plan.description);
 
+  const [isBigger, setIsBigger] = useState(false);
   const validationModal = useRef();
 
   const handleInputChange = (field, value) => {
@@ -32,7 +33,7 @@ export default function SelectedWeeklyPlan({
   };
 
   const handleUpdateSave = () => {
-    // vaildation
+    // vaildation for empty value
     if (
       from.trim() === "" ||
       to.trim() === "" ||
@@ -43,6 +44,14 @@ export default function SelectedWeeklyPlan({
       validationModal.current.open();
       return;
     }
+
+    // validation for dates
+    if (from > to) {
+      setIsBigger(true);
+      validationModal.current.open();
+      return;
+    }
+
     updateWeeklyToDo(plan._id, from, to, subject, description, setPlanState);
   };
 
@@ -54,12 +63,25 @@ export default function SelectedWeeklyPlan({
     <>
       <ValidationModal ref={validationModal} buttonCaption="Okay">
         <h2 className="text-xl font-bold text-stone-700 my-4">Invalid Input</h2>
-        <p className="text-stone-600 mb-4">
-          Oops ... looks like you forget to enter a value
-        </p>
-        <p className="text-stone-600 mb-4">
-          Please make sure you provide a valid value for every input field
-        </p>
+        {isBigger ? (
+          <>
+            <p className="text-stone-600 mb-4">
+              Oop ... looks like you set due date earlier than starting date.
+            </p>
+            <p className="text-stone-600 mb-4">
+              Please make sure you set due date later than staring date.
+            </p>
+          </>
+        ) : (
+          <>
+            <p className="text-stone-600 mb-4">
+              Oops ... looks like you forget to enter a value
+            </p>
+            <p className="text-stone-600 mb-4">
+              Please make sure you provide a valid value for every input field
+            </p>
+          </>
+        )}
       </ValidationModal>
       <div className="w-[35rem] mt-16">
         <header className="pb-4 mb-4 border-b-2 border-stone-300">
