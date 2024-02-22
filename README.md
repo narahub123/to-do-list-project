@@ -151,6 +151,6 @@
 
 #### - validation
 
-#### - page navigation
+#### - page navigation, 사이드바에도 즉각적으로 반영
 
-#### - ~rest api~ : 0909 기존 post method를 사용해서 수정, 삭제한 것을 patch와 delete로 변경
+#### - ~rest api 수정~ : 0909 기존 post method를 사용해서 수정, 삭제한 것을 patch와 delete로 변경
