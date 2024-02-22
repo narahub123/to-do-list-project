@@ -152,3 +152,5 @@
 #### - validation
 
 #### - page navigation
+
+#### - ~rest api~ : 0909 기존 post method를 사용해서 수정, 삭제한 것을 patch와 delete로 변경
