@@ -9,6 +9,7 @@ function App() {
   const [planState, setPlanState] = useState({
     selectedPlanId: undefined,
     plans: [],
+    wwws: {},
     isUpdating: false,
   });
 
@@ -81,6 +82,7 @@ function App() {
         <Sidebar
           onStartAddPlan={handleStartAddPlan}
           plans={planState.plans}
+          wwws={planState.wwws}
           onSelectPlan={handleSelectPlan}
         />
         {content}

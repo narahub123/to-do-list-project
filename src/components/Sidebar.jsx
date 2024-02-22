@@ -1,18 +1,7 @@
 import Button from "./Button";
 import Accordion from "./Accordion";
 
-export default function Sidebar({ onStartAddPlan, plans, onSelectPlan }) {
-  // calculate week number of the date
-  function handleWeekNumber(date) {
-    const dataObject = new Date(date);
-    const startOfYear = new Date(dataObject.getFullYear(), 0, 0);
-    const diff = dataObject - startOfYear;
-    const oneWeek = 1000 * 60 * 60 * 24 * 7;
-    const weekNumber = Math.floor(diff / oneWeek) + 1;
-    // console.log(weekNumber);
-    return weekNumber;
-  }
-
+export default function Sidebar({ onStartAddPlan, plans, wwws, onSelectPlan }) {
   return (
     <aside className="w-1/3 px-8 py-6 bg-stone-900 text-stone-50 md:w-72 rounded-r-xl">
       <section>
@@ -20,18 +9,19 @@ export default function Sidebar({ onStartAddPlan, plans, onSelectPlan }) {
           Your Weekly Plans
         </h3>
         <ul className="mb-3">
-          {plans.map((plan) => {
-            let weekNumber = handleWeekNumber(plan.from);
-            const year = plan.from.split("-")[0];
-            const month = plan.from.split("-")[1];
-            const key = plan._id;
-            // console.log(key);
+          {Object.keys(wwws).map((year) => {
             return (
-              <li key={key}>
-                <Accordion title={year}>
-                  <Accordion title={month}>
-                    <p onClick={() => onSelectPlan(key)}>week {weekNumber}</p>
-                  </Accordion>
+              <li key={year}>
+                <Accordion title={year} key={year}>
+                  {Object.keys(wwws[year]).map((month) => (
+                    <Accordion title={month} key={month}>
+                      {Object.keys(wwws[year][month]).map((week) => (
+                        <p onClick={() => onSelectPlan(week)} key={week}>
+                          week {week}
+                        </p>
+                      ))}
+                    </Accordion>
+                  ))}
                 </Accordion>
               </li>
             );

@@ -145,10 +145,6 @@
 
 ## Day 4 코드 수정 하기
 
-#### - error handling
-
-#### - validation
-
 #### - ~page navigation, 사이드바에도 즉각적으로 반영~
 
 #### - 0925 update 변경
@@ -161,7 +157,7 @@
 
 #### - ~rest api 수정~ : 0909 기존 post method를 사용해서 수정, 삭제한 것을 patch와 delete로 변경
 
-#### - modal
+#### - modal && validation
 
 #### 1. 빈칸에 대한 유효성 검사를 하는 모달 - 1727 완료
 
@@ -177,3 +173,11 @@
 
 ![121](https://github.com/narahub123/to-do-list-project/assets/93567002/ba8148ea-a26b-4885-a39c-9770efccdbb1)
 ![122](https://github.com/narahub123/to-do-list-project/assets/93567002/fe59a43f-a017-4c39-90e7-cc5316539e24)
+
+#### sidebar accordion refactoring - 2343 완료 (?) : json
+
+![123](https://github.com/narahub123/to-do-list-project/assets/93567002/716fca03-b1f1-4911-87e4-95a2178b3de3)
+
+#### troubleshooting 키 값을 고려하지 않고 데이터 구조를 바꿔서 클릭시 보이는 화면을 바꿔야 함
+
+#### - error handling
