@@ -149,6 +149,14 @@
 
 #### - modal
 
+#### - 1645 troubleshooting : 모달창 안에서도 글씨 부분과 글씨부분이외의 부분이 구분되어서 글씨부분을 클릭하면 모달창이 닫히지 않는데 그 이외의 부분을 클릭하면 모달창이 닫힘
+
+![119](https://github.com/narahub123/to-do-list-project/assets/93567002/ad2e6015-162e-4294-8fab-93d2bbc3e1d8)
+
+#### 1709 wrapper를 이용해서 해결했지만 코드가 많아서 불만..
+
+![120](https://github.com/narahub123/to-do-list-project/assets/93567002/65d74ddc-e57c-4f05-b86f-096004ea9d23)
+
 #### - validation
 
 #### - ~page navigation, 사이드바에도 즉각적으로 반영~
