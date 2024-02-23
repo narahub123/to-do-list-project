@@ -206,3 +206,6 @@
 
 #### - 휴지통 만들기 
 ![125](https://github.com/narahub123/to-do-list-project/assets/93567002/483a2dfb-25a9-442d-a037-f020ad5cb821)
+
+#### - 새 카드 추가 
+![126](https://github.com/narahub123/to-do-list-project/assets/93567002/1c33e2bd-31fe-4ca6-89e8-7b71df44c65d)

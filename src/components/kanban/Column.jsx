@@ -3,6 +3,7 @@ import { getWeekNumber } from "../../util/dateCalculation";
 import Card from "./Card";
 import DropIndicator from "./DropIndicator";
 import TrashBin from "./TrashBin";
+import AddCard from "./AddCard";
 
 const Column = ({ title, headingColor, column, cards, setCards }) => {
   const [active, setActive] = useState(false);
@@ -31,7 +32,8 @@ const Column = ({ title, headingColor, column, cards, setCards }) => {
           return <Card key={c._id} {...c} />;
         })}
         <DropIndicator beforeId="-1" column={column} />
-        {filteredCards.length && <TrashBin setCards={setCards} />}
+        <AddCard column={column} setCards={setCards} />
+        {filteredCards.length > 0 && <TrashBin setCards={setCards} />}
       </div>
     </div>
   );
