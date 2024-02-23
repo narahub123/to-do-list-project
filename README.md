@@ -195,3 +195,8 @@
 #### - 저장된 일정 개수 세기
 
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/18a6bb9b-ba7a-47c5-b1d0-60e6b4fb7667)
+
+## 칸반 카드 
+#### - 카드 스타일링 
+ 
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/4e8071bf-c599-4b44-9a2d-211e4c4d9e17)
