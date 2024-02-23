@@ -203,3 +203,6 @@
 
 #### - 드래그 앤 드롭 표시하기 
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/030fe4b1-73a1-4c46-924e-bbab63f10659)
+
+#### - 휴지통 만들기 
+![125](https://github.com/narahub123/to-do-list-project/assets/93567002/483a2dfb-25a9-442d-a037-f020ad5cb821)
