@@ -191,3 +191,7 @@
 #### - 이번주에 하이라이트 주기
 
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/f02ec16a-5618-454e-b01a-09e519d6d86b)
+
+#### - 저장된 일정 개수 세기
+
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/18a6bb9b-ba7a-47c5-b1d0-60e6b4fb7667)

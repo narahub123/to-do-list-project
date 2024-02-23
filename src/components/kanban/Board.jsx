@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Column from "./Column";
 import { boardHeaders, getWeekNumber } from "../../util/dateCalculation";
 
-const Board = (ymwf) => {
-  const [cards, setCards] = useState([]); // hold actual data for each of individual cards
+const Board = ({ plans }) => {
+  // console.log(plans);
+  const [cards, setCards] = useState(plans); // hold actual data for each of individual cards
 
+  // console.log(cards);
+
+  useEffect(() => {
+    setCards(plans);
+  }, [plans]);
   const today = new Date();
   const weekNumber = getWeekNumber(today);
   // console.log(weekNumber);
@@ -13,14 +19,14 @@ const Board = (ymwf) => {
 
   return (
     <div className="flex h-full w-full gap-3 overflow-scroll p-12">
-      {boardHeaders.map((boardHeader, index) => {
+      {boardHeaders.map((boardHeader) => {
         return (
           <Column
             key={boardHeader.monday}
             title={`W${boardHeader.weekNumber} ( ${
               boardHeader.monday
             } - ${boardHeader.sunday.slice(5, 11)} )`}
-            column={`week ${index}`}
+            column={boardHeader.weekNumber}
             headingColor={
               boardHeader.weekNumber === weekNumber
                 ? "text-yellow-500"

@@ -77,6 +77,7 @@ function App() {
     content = <NoPlanSet onStartAddProject={handleStartAddPlan} />;
   } // if ends
 
+  console.log(planState.plans);
   return (
     <>
       <main className="h-screen my-8 flex gap-6">
@@ -86,7 +87,7 @@ function App() {
           ymwf={planState.ymwf}
           onSelectPlan={handleSelectPlan}
         />
-        <Kanban ymwf={planState.ymwf} />
+        <Kanban plans={planState.plans} />
         {/* {content} */}
       </main>
     </>

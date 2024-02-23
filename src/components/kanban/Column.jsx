@@ -1,12 +1,22 @@
 import React, { useState } from "react";
+import { getWeekNumber } from "../../util/dateCalculation";
 
 const Column = ({ title, headingColor, column, cards, setCards }) => {
   const [active, setActive] = useState(false);
+
+  const filteredCards = cards.filter((c) => {
+    console.log(getWeekNumber(c.from) === column);
+    return getWeekNumber(c.from) === column;
+  });
+
+  // console.log(filteredCards);
   return (
     <div className="w-56 shrink-0">
       <div className="mb-3 flex items-center justify-between">
         <h3 className={`font-medium ${headingColor}`}>{title}</h3>
-        <span className="rounded text-sm text-neutral-400">{cards.length}</span>
+        <span className="rounded text-sm text-neutral-400">
+          {filteredCards.length}
+        </span>
       </div>
       <div
         className={`h-full w-full transition-colors ${
