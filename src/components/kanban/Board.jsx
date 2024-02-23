@@ -34,6 +34,8 @@ const Board = ({ plans }) => {
             } // highlight current week
             cards={cards}
             setCards={setCards}
+            min={boardHeader.monday}
+            max={boardHeader.sunday}
           />
         );
       })}

@@ -67,3 +67,14 @@ export function getWeekNumber(date) {
 
   return week;
 } // getWeekNumber() ends
+
+export const formatDate = (date) => {
+  const parts = date.split(".");
+  const monthPart = parts[1].trim();
+  const dayPart = parts[2].trim();
+
+  const month = monthPart.length === 1 ? "0" + monthPart : monthPart;
+  const day = dayPart.split(".")[0].length === 1 ? "0" + dayPart : dayPart;
+
+  return parts[0] + "-" + month + "-" + day;
+};

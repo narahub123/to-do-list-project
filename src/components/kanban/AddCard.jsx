@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { FiPlus } from "react-icons/fi";
+import { formatDate } from "../../util/dateCalculation";
 
-const AddCard = ({ column, setCards }) => {
+const AddCard = ({ min, max, column, setCards }) => {
   const [text, setText] = useState("");
   const [adding, setAdding] = useState(false);
+
+  // set range of dates for weekly plan
+  min = formatDate(min);
+  max = formatDate(max);
+  // console.log(min, max);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,7 +19,6 @@ const AddCard = ({ column, setCards }) => {
     const newCard = {
       column,
       title: text.trim(),
-      id: Math.random().toString(),
     };
 
     setCards((pv) => [...pv, newCard]);
@@ -23,14 +28,37 @@ const AddCard = ({ column, setCards }) => {
     <>
       {adding ? (
         <form onSubmit={handleSubmit}>
-          <textarea
-            onChange={(e) => setText(e.target.value)}
-            autoFocus
-            placeholder="Add new weekly plan..."
-            className="w-full rounded border border-violet-400 bg-violet-400/20
-                       p-3 text-sm text-neutral-50  placeholder-neutral-300 focus:outline-0"
-          />
-          <div className="mt-1.5 flex items-center justify-end gap-1.5">
+          <div className="w-full rounded border border-violet-400 bg-violet-400/20 ">
+            <p className="w-full p-3">
+              <input
+                type="text"
+                className="w-full pb-0.5 bg-transparent text-sm placeholder-neutral-300  focus:outline-0   focus:placeholder-transparent"
+                placeholder="Add new weekly plan..."
+              />
+            </p>
+            <p className="mx-3">
+              <input
+                type="date"
+                placeholder="start"
+                className="border-0 bg-transparent text-xs text-neutral-400 focus:outline-0"
+                defaultValue={min}
+              />
+              <input
+                type="date"
+                placeholder="end"
+                className="ml-1 border-0 bg-transparent text-xs text-neutral-400 focus:outline-0"
+                defaultValue={max}
+              />
+            </p>
+            <p className="w-full p-3">
+              <input
+                type="text"
+                className="w-full pb-0.5 bg-transparent text-sm placeholder-neutral-300  focus:outline-0   focus:placeholder-transparent"
+                placeholder="Add description"
+              />
+            </p>
+          </div>
+          <div className="my-1.5 flex items-center justify-end gap-1.5">
             <button
               onClick={() => setAdding(false)}
               className="px-3 py-1.5 text-xs text-neutral-400 transition-colors hover:text-neutral-50"
@@ -50,10 +78,10 @@ const AddCard = ({ column, setCards }) => {
       ) : (
         <button
           onClick={() => setAdding(true)}
-          className="flex w-full items-center gap-1.5 px-3 py-1.5 text-xs text-neutral-400
-                     transition-colors hover: text-neutral-50"
+          className="flex w-full items-center gap-1.5 p-3 mb-1.5 text-xs text-neutral-400
+                     rounded border border-neutral-700 bg-neutral-800  transition-colors hover:text-neutral-50 hover:border-neutral-500"
         >
-          <span>Add Card</span>
+          <span>Add Plan</span>
           <FiPlus />
         </button>
       )}

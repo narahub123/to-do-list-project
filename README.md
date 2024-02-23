@@ -196,16 +196,24 @@
 
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/18a6bb9b-ba7a-47c5-b1d0-60e6b4fb7667)
 
-## 칸반 카드 
-#### - 카드 스타일링 
- 
+## 칸반 카드
+
+#### - 카드 스타일링
+
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/4e8071bf-c599-4b44-9a2d-211e4c4d9e17)
 
-#### - 드래그 앤 드롭 표시하기 
+#### - 드래그 앤 드롭 표시하기
+
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/030fe4b1-73a1-4c46-924e-bbab63f10659)
 
-#### - 휴지통 만들기 
+#### - 휴지통 만들기
+
 ![125](https://github.com/narahub123/to-do-list-project/assets/93567002/483a2dfb-25a9-442d-a037-f020ad5cb821)
 
-#### - 새 카드 추가 
+#### - 새 카드 추가
+
 ![126](https://github.com/narahub123/to-do-list-project/assets/93567002/1c33e2bd-31fe-4ca6-89e8-7b71df44c65d)
+
+#### - 카드 레이아웃 변경
+
+![127](https://github.com/narahub123/to-do-list-project/assets/93567002/c42461ce-58f5-462d-a63b-50220a521fc4)
