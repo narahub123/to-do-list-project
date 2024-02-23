@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { getWeekNumber } from "../../util/dateCalculation";
+import Card from "./Card";
 
 const Column = ({ title, headingColor, column, cards, setCards }) => {
   const [active, setActive] = useState(false);
 
   const filteredCards = cards.filter((c) => {
-    console.log(getWeekNumber(c.from) === column);
+    // console.log(getWeekNumber(c.from) === column);
     return getWeekNumber(c.from) === column;
   });
 
-  // console.log(filteredCards);
+  console.log(filteredCards);
   return (
     <div className="w-56 shrink-0">
       <div className="mb-3 flex items-center justify-between">
@@ -22,7 +23,12 @@ const Column = ({ title, headingColor, column, cards, setCards }) => {
         className={`h-full w-full transition-colors ${
           active ? "bg-neutral-800/50" : "bg-neutral-800/0"
         }`}
-      ></div>
+      >
+        {filteredCards.map((c) => {
+          console.log(c);
+          return <Card key={c._id} {...c} />;
+        })}
+      </div>
     </div>
   );
 };
