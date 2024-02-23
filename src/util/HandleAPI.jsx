@@ -38,7 +38,7 @@ const getAllWeeklyToDos = (setPlanState) => {
       selectedPlanId: data.data._id,
       // plans: data.data,
       plans: data.data,
-      wwws: plans,
+      ymwf: plans,
     });
   });
 };

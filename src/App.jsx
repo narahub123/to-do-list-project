@@ -4,13 +4,13 @@ import NoPlanSet from "./components/NoPlanSet";
 import { useEffect, useState } from "react";
 import { getAllWeeklyToDos } from "./util/HandleAPI";
 import SelectedWeeklyPlan from "./components/SelectedWeeklyPlan";
-import { NotionKanban } from "./study/NotionKanban";
+import Kanban from "./components/kanban/Kanban";
 
 function App() {
   const [planState, setPlanState] = useState({
     selectedPlanId: undefined,
     plans: [],
-    wwws: {},
+    ymwf: {},
     isUpdating: false,
   });
 
@@ -79,14 +79,14 @@ function App() {
 
   return (
     <>
-      <main className="h-screen my-8 flex gap-8">
+      <main className="h-screen my-8 flex gap-6">
         <Sidebar
           onStartAddPlan={handleStartAddPlan}
           plans={planState.plans}
-          wwws={planState.wwws}
+          ymwf={planState.ymwf}
           onSelectPlan={handleSelectPlan}
         />
-        <NotionKanban />
+        <Kanban ymwf={planState.ymwf} />
         {/* {content} */}
       </main>
     </>

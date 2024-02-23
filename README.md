@@ -181,3 +181,13 @@
 #### troubleshooting 키 값을 고려하지 않고 데이터 구조를 바꿔서 클릭시 보이는 화면을 바꿔야 함
 
 #### - error handling
+
+## DAY 5 디자인 수정 하기 - 칸반 스타일로 변경
+
+### 칸반 헤더
+
+#### - 이번달에 속한 주들 보여주기
+
+#### - 이번주에 하이라이트 주기
+
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/f02ec16a-5618-454e-b01a-09e519d6d86b)

@@ -1,7 +1,7 @@
 import Button from "./Button";
 import Accordion from "./Accordion";
 
-export default function Sidebar({ onStartAddPlan, plans, wwws, onSelectPlan }) {
+export default function Sidebar({ onStartAddPlan, plans, ymwf, onSelectPlan }) {
   return (
     <aside className="w-1/3 px-8 py-6 bg-stone-900 text-stone-50 md:w-72 rounded-r-xl">
       <section>
@@ -9,13 +9,13 @@ export default function Sidebar({ onStartAddPlan, plans, wwws, onSelectPlan }) {
           Your Weekly Plans
         </h3>
         <ul className="mb-3">
-          {Object.keys(wwws).map((year) => {
+          {Object.keys(ymwf).map((year) => {
             return (
               <li key={year}>
                 <Accordion title={year} key={year}>
-                  {Object.keys(wwws[year]).map((month) => (
+                  {Object.keys(ymwf[year]).map((month) => (
                     <Accordion title={month} key={month}>
-                      {Object.keys(wwws[year][month]).map((week) => (
+                      {Object.keys(ymwf[year][month]).map((week) => (
                         <p onClick={() => onSelectPlan(week)} key={week}>
                           week {week}
                         </p>
