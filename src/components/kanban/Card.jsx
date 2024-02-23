@@ -1,9 +1,12 @@
 import React from "react";
+import { getWeekNumber } from "../../util/dateCalculation";
+import DropIndicator from "./DropIndicator";
 
-const Card = ({ subject, _id, column }) => {
+const Card = ({ subject, _id, from }) => {
+  const column = getWeekNumber(from);
   return (
     <>
-      <DropIndicator beforeId={id} column={column} />
+      <DropIndicator beforeId={_id} column={column} />
       <div
         draggable="true"
         className="cursor-grab rounded border border-neutral-700 bg-neutral-800 p-3 active:cursor-grabbing"

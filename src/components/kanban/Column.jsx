@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { getWeekNumber } from "../../util/dateCalculation";
 import Card from "./Card";
+import DropIndicator from "./DropIndicator";
 
 const Column = ({ title, headingColor, column, cards, setCards }) => {
   const [active, setActive] = useState(false);
@@ -28,6 +29,7 @@ const Column = ({ title, headingColor, column, cards, setCards }) => {
           console.log(c);
           return <Card key={c._id} {...c} />;
         })}
+        <DropIndicator beforeId="-1" column={column} />
       </div>
     </div>
   );
