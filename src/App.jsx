@@ -4,6 +4,7 @@ import NoPlanSet from "./components/NoPlanSet";
 import { useEffect, useState } from "react";
 import { getAllWeeklyToDos } from "./util/HandleAPI";
 import SelectedWeeklyPlan from "./components/SelectedWeeklyPlan";
+import { NotionKanban } from "./study/NotionKanban";
 
 function App() {
   const [planState, setPlanState] = useState({
@@ -85,7 +86,8 @@ function App() {
           wwws={planState.wwws}
           onSelectPlan={handleSelectPlan}
         />
-        {content}
+        <NotionKanban />
+        {/* {content} */}
       </main>
     </>
   );
