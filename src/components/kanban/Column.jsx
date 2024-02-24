@@ -26,7 +26,7 @@ const Column = ({
     return getWeekNumber(c.from) === column;
   });
 
-  console.log("filteredCards", filteredCards);
+  // console.log("filteredCards", filteredCards);
   return (
     <div className="w-56 shrink-0">
       <div className="mb-3 flex items-center justify-between">
@@ -41,10 +41,11 @@ const Column = ({
         }`}
       >
         {filteredCards.map((c) => {
-          console.log(c);
+          // console.log(c);
           return (
             <Card
               key={c._id}
+              card={c}
               {...c}
               handleDragStart={handleDragStart}
               setPlanState={setPlanState}

@@ -30,7 +30,7 @@ const AddCard = ({ min, max, column, setCards, setPlanState }) => {
   // set range of dates for weekly plan
   min = formatDate(min);
   max = formatDate(max);
-  console.log(min, max);
+  // console.log(min, max);
 
   const handleSave = () => {
     const enteredTo = formatDateAndTime(new Date(to.current.value));

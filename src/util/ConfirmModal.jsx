@@ -1,14 +1,24 @@
 import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import { createPortal } from "react-dom";
-import { deleteWeeklyToDo } from "./HandleAPI";
+import { deleteWeeklyToDo, updateWeeklyToDo } from "./HandleAPI";
 
 const ConfirmModal = forwardRef(
-  ({ children, cancel, confirm, setPlanState, id }, ref) => {
+  (
+    {
+      children,
+      cancel,
+      confirm,
+      setPlanState,
+      card,
+      isDeleting,
+      setIsDeleting,
+      isEditing,
+      setIsEditing,
+      updatedCard,
+    },
+    ref
+  ) => {
     const dialog = useRef();
-
-    const handleDelete = (cardId) => {
-      deleteWeeklyToDo(cardId, setPlanState);
-    }; // handleDelete() ends
 
     useImperativeHandle(ref, () => {
       return {
@@ -23,9 +33,44 @@ const ConfirmModal = forwardRef(
         // 모달 백드롭을 클릭했을 때만 모달을 닫습니다.
         dialog.current.close();
 
-        onClose();
+        handleCancel();
       }
     }; // handleCloseBackdrop() ends
+
+    console.log("deleting", isDeleting);
+    console.log("editing", isEditing);
+    // modal
+    const handleModal = () => {
+      if (isDeleting) {
+        handleDelete(card._id);
+        setIsDeleting(false);
+      }
+      if (isEditing) {
+        handleEdit(updatedCard(), setPlanState);
+        setIsEditing(false);
+      }
+    }; // handleModal() ends
+
+    // update
+    const handleEdit = (c, setPlanState) => {
+      console.log(c);
+      updateWeeklyToDo(
+        c._id,
+        c.from,
+        c.to,
+        c.subject,
+        c.description,
+        setPlanState
+      );
+    }; // handleEdit() ends
+
+    // delete
+    const handleDelete = () => {
+      deleteWeeklyToDo(card._id, setPlanState);
+    }; // handleDelete() ends
+
+    // cancel
+    const handleCancel = () => {};
 
     return createPortal(
       <div onClick={handleCloseBackdrop}>
@@ -40,13 +85,15 @@ const ConfirmModal = forwardRef(
                 method="dialog"
                 className="px-3 py-3 text-sm text-neutral-900 transition-colors rounded-lg hover:text-neutral-50 hover:bg-neutral-800"
               >
-                <button>{cancel}</button>
+                <button className="border-neutral-0" onClick={handleCancel}>
+                  {cancel}
+                </button>
               </form>
               <form
                 method="dialog"
                 className="px-3 py-3 text-sm text-neutral-900 transition-colors rounded-lg hover:text-neutral-50 hover:bg-neutral-800"
               >
-                <button onClick={() => handleDelete(id)}>{confirm}</button>
+                <button onClick={handleModal}>{confirm}</button>
               </form>
             </div>
           </div>

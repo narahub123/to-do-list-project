@@ -233,3 +233,12 @@
 #### 모달
 
 ![130](https://github.com/narahub123/to-do-list-project/assets/93567002/e3ee0889-7009-41c9-b51a-ea6129331bff)
+
+### 수정 1113 완료 
+#### db와 연결과 유효성 검사 완료
+![131](https://github.com/narahub123/to-do-list-project/assets/93567002/e4fe4116-b39b-4f86-a98b-953fb62698dd)
+
+### troubleshooting 
+#### 모달 버튼에 보더가 생김 
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/5073baee-0eeb-42a9-9d6d-99191dd70d90)
+
