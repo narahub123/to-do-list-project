@@ -87,7 +87,7 @@ function App() {
           ymwf={planState.ymwf}
           onSelectPlan={handleSelectPlan}
         />
-        <Kanban plans={planState.plans} />
+        <Kanban plans={planState.plans} setPlanState={setPlanState} />
         {/* {content} */}
       </main>
     </>

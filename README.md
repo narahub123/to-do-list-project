@@ -217,3 +217,6 @@
 #### - 카드 레이아웃 변경
 
 ![127](https://github.com/narahub123/to-do-list-project/assets/93567002/c42461ce-58f5-462d-a63b-50220a521fc4)
+
+#### - 카드 추가 및 유효성 검사 
+![128](https://github.com/narahub123/to-do-list-project/assets/93567002/aba3bba1-4e82-4481-b37c-5d69e16d8737)

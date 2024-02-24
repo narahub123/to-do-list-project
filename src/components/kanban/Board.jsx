@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Column from "./Column";
 import { boardHeaders, getWeekNumber } from "../../util/dateCalculation";
 
-const Board = ({ plans }) => {
+const Board = ({ plans, setPlanState }) => {
   // console.log(plans);
   const [cards, setCards] = useState(plans); // hold actual data for each of individual cards
 
@@ -36,6 +36,7 @@ const Board = ({ plans }) => {
             setCards={setCards}
             min={boardHeader.monday}
             max={boardHeader.sunday}
+            setPlanState={setPlanState}
           />
         );
       })}

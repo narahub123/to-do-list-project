@@ -78,3 +78,28 @@ export const formatDate = (date) => {
 
   return parts[0] + "-" + month + "-" + day;
 };
+
+export const formateDateToDashDate = (date) => {
+  const year = date.getFullYear();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+
+  if (month < 10) {
+    month = "0" + month;
+  }
+  if (day < 10) {
+    day = "0" + day;
+  }
+
+  return `${year}-${month}-${day}`;
+};
+
+export const formatDateAndTime = (date) => {
+  const year = date.getFullYear();
+  const month = date.getMonth();
+  const day = date.getDate();
+
+  const formatedDate = new Date(year, month, day, 0, 0, 0);
+
+  return formatedDate;
+};

@@ -5,7 +5,16 @@ import DropIndicator from "./DropIndicator";
 import TrashBin from "./TrashBin";
 import AddCard from "./AddCard";
 
-const Column = ({ title, headingColor, column, cards, setCards, min, max }) => {
+const Column = ({
+  title,
+  headingColor,
+  column,
+  cards,
+  setCards,
+  min,
+  max,
+  setPlanState,
+}) => {
   const [active, setActive] = useState(false);
 
   const filteredCards = cards.filter((c) => {
@@ -32,7 +41,13 @@ const Column = ({ title, headingColor, column, cards, setCards, min, max }) => {
           return <Card key={c._id} {...c} />;
         })}
         <DropIndicator beforeId="-1" column={column} />
-        <AddCard column={column} setCards={setCards} min={min} max={max} />
+        <AddCard
+          column={column}
+          setCards={setCards}
+          min={min}
+          max={max}
+          setPlanState={setPlanState}
+        />
         {filteredCards.length > 0 && <TrashBin setCards={setCards} />}
       </div>
     </div>
