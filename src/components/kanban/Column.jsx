@@ -17,12 +17,16 @@ const Column = ({
 }) => {
   const [active, setActive] = useState(false);
 
+  const handleDragStart = (e, card) => {
+    e.dataTransfer.setData("cardId", card._id);
+  };
+
   const filteredCards = cards.filter((c) => {
     // console.log(getWeekNumber(c.from) === column);
     return getWeekNumber(c.from) === column;
   });
 
-  console.log(filteredCards);
+  console.log("filteredCards", filteredCards);
   return (
     <div className="w-56 shrink-0">
       <div className="mb-3 flex items-center justify-between">
@@ -38,7 +42,14 @@ const Column = ({
       >
         {filteredCards.map((c) => {
           console.log(c);
-          return <Card key={c._id} {...c} />;
+          return (
+            <Card
+              key={c._id}
+              {...c}
+              handleDragStart={handleDragStart}
+              setPlanState={setPlanState}
+            />
+          );
         })}
         <DropIndicator beforeId="-1" column={column} />
         <AddCard
@@ -48,7 +59,9 @@ const Column = ({
           max={max}
           setPlanState={setPlanState}
         />
-        {filteredCards.length > 0 && <TrashBin setCards={setCards} />}
+        {filteredCards.length > 0 && (
+          <TrashBin setCards={setCards} setPlanState={setPlanState} />
+        )}
       </div>
     </div>
   );

@@ -223,3 +223,13 @@
 ![128](https://github.com/narahub123/to-do-list-project/assets/93567002/aba3bba1-4e82-4481-b37c-5d69e16d8737)
 
 ## DAY 5 CRUD 끝내기
+
+### 삭제 1803 완성
+
+#### 드래그 앤 드롭
+
+![129](https://github.com/narahub123/to-do-list-project/assets/93567002/cc4a2040-c5a3-4d41-8564-ea9d4b80022d)
+
+#### 모달
+
+![130](https://github.com/narahub123/to-do-list-project/assets/93567002/e3ee0889-7009-41c9-b51a-ea6129331bff)
