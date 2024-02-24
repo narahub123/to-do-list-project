@@ -1,6 +1,7 @@
 import React, { forwardRef, useImperativeHandle, useRef } from "react";
 import { createPortal } from "react-dom";
 import { deleteWeeklyToDo, updateWeeklyToDo } from "./HandleAPI";
+import ButtonForm from "../components/kanban/ButtonForm";
 
 const ConfirmModal = forwardRef(
   (
@@ -81,20 +82,8 @@ const ConfirmModal = forwardRef(
           <div>
             {children}
             <div className="flex justify-between">
-              <form
-                method="dialog"
-                className="px-3 py-3 text-sm text-neutral-900 transition-colors rounded-lg hover:text-neutral-50 hover:bg-neutral-800"
-              >
-                <button className="border-neutral-0" onClick={handleCancel}>
-                  {cancel}
-                </button>
-              </form>
-              <form
-                method="dialog"
-                className="px-3 py-3 text-sm text-neutral-900 transition-colors rounded-lg hover:text-neutral-50 hover:bg-neutral-800"
-              >
-                <button onClick={handleModal}>{confirm}</button>
-              </form>
+              <ButtonForm onClick={handleCancel}>{cancel}</ButtonForm>
+              <ButtonForm onClick={handleModal}>{confirm}</ButtonForm>
             </div>
           </div>
         </dialog>

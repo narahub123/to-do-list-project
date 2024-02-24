@@ -1,5 +1,6 @@
 import { forwardRef, useImperativeHandle, useRef } from "react";
 import { createPortal } from "react-dom";
+import ButtonForm from "../components/kanban/ButtonForm";
 
 const ValidationModal = forwardRef(
   ({ children, buttonCaption, onClose }, ref) => {
@@ -34,16 +35,17 @@ const ValidationModal = forwardRef(
         >
           <div onClick={handleModalClick}>
             {children}
-            <form method="dialog" className="mt-4 text-right">
-              <button
+            <div className="text-right rounded-none">
+              <ButtonForm
                 onClick={() => {
                   dialog.current.close();
                   onClose();
                 }}
+                style={"inline-block"}
               >
                 {buttonCaption}
-              </button>
-            </form>
+              </ButtonForm>
+            </div>
           </div>
         </dialog>
       </div>,

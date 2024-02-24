@@ -45,7 +45,7 @@ const Card = ({ card, handleDragStart, setPlanState }) => {
 
   const handleEditModal = () => {
     let updated = updatedCard();
-    console.log(updated);
+    // console.log(updated);
     if (updated !== undefined) {
       confirmModal.current.open();
       setIsEditing(true);
@@ -161,7 +161,7 @@ const Card = ({ card, handleDragStart, setPlanState }) => {
               Oops ... it seems you forget to enter a value
             </p>
             <p className="text-stone-600 mb-4">
-              Please rovide a valid value for every input field
+              Please provide a valid value for every input field
             </p>
           </>
         )}
