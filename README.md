@@ -260,8 +260,16 @@
 
 ![133](https://github.com/narahub123/to-do-list-project/assets/93567002/fad77e2b-1786-4ace-bdb0-790e52d3d8b6)
 
-### 구분자 하이라이트 
+### 구분자 하이라이트
+
 ![134](https://github.com/narahub123/to-do-list-project/assets/93567002/bac47a18-9721-4617-b156-5455defc0cd3)
 
-### troubleshooting - 일요일에 그 다음주의 컬럼에 하이라이트가 됨 
+### troubleshooting - 일요일에 그 다음주의 컬럼에 하이라이트가 됨
+
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/6dac443e-2ea7-4060-8091-2f6bbd5cc5df)
+
+#### 주 번호를 부여할 때 새해 첫날을 잘못 세팅함
+
+#### const startOfYear = new Date(dataObject.getFullYear(), 0, 0);
+
+#### -> const startOfYear = new Date(dataObject.getFullYear(), 0, 1);

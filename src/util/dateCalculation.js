@@ -60,7 +60,8 @@ function getMondaysInMonth(year, month) {
 // Calculate the number of week in year
 export function getWeekNumber(date) {
   const dataObject = new Date(date);
-  const startOfYear = new Date(dataObject.getFullYear(), 0, 0);
+  const startOfYear = new Date(dataObject.getFullYear(), 0, 1);
+  console.log(startOfYear);
   const diff = dataObject - startOfYear;
   const oneWeek = 1000 * 60 * 60 * 24 * 7;
   const week = Math.floor(diff / oneWeek) + 1;
