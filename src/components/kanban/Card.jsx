@@ -9,6 +9,7 @@ import DropIndicator from "./DropIndicator";
 import { FiTrash, FiEdit, FiSave, FiXCircle } from "react-icons/fi";
 import ConfirmModal from "../../util/ConfirmModal";
 import ValidationModal from "../../util/ValidationModal";
+import { motion } from "framer-motion";
 
 const Card = ({ card, handleDragStart, setPlanState }) => {
   const confirmModal = useRef();
@@ -202,7 +203,7 @@ const Card = ({ card, handleDragStart, setPlanState }) => {
       </ConfirmModal>
       <DropIndicator beforeId={card._id} column={column} />
       {isEditing ? (
-        <div className="cursor-grab rounded border border-neutral-700 bg-neutral-800 p-3 active:cursor-grabbing hover:border-neutral-500">
+        <motion.div className="cursor-grab rounded border border-neutral-700 bg-neutral-800 p-3 active:cursor-grabbing hover:border-neutral-500">
           <div className="flex items-center justify-between">
             <p>
               <input
@@ -248,9 +249,11 @@ const Card = ({ card, handleDragStart, setPlanState }) => {
               ref={editedDescription}
             />
           </p>
-        </div>
+        </motion.div>
       ) : (
-        <div
+        <motion.div
+          layout
+          layoutId={card._id}
           draggable="true"
           onDragStart={(e) => handleDragStart(e, card)}
           className="cursor-grab rounded border border-neutral-700 bg-neutral-800 p-3 active:cursor-grabbing hover:border-neutral-500"
@@ -275,7 +278,7 @@ const Card = ({ card, handleDragStart, setPlanState }) => {
             <span className="text-xs text-neutral-400">{card.to}</span>
           </p>
           <p className="text-sm text-neutral-200 mt-2 ">+ {card.description}</p>
-        </div>
+        </motion.div>
       )}
     </>
   );

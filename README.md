@@ -236,6 +236,8 @@
 
 ### 수정 1113 완료
 
+## Day 6 Crud 완료하기 
+
 #### db와 연결과 유효성 검사 완료
 
 ![131](https://github.com/narahub123/to-do-list-project/assets/93567002/e4fe4116-b39b-4f86-a98b-953fb62698dd)
@@ -247,3 +249,7 @@
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/5073baee-0eeb-42a9-9d6d-99191dd70d90)
 
 #### - button className에 outline-0을 추가하니까 없어짐
+
+## Day 7 
+### 모션 추가하기 
+![132](https://github.com/narahub123/to-do-list-project/assets/93567002/442550c7-041d-4efe-b739-9ed44ddeccfd)

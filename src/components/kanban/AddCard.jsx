@@ -7,6 +7,7 @@ import {
 } from "../../util/dateCalculation";
 import ValidationModal from "../../util/ValidationModal";
 import { saveWeeklyToDo } from "../../util/HandleAPI";
+import { motion } from "framer-motion";
 
 const AddCard = ({ min, max, column, setCards, setPlanState }) => {
   // const [text, setText] = useState("");
@@ -198,14 +199,15 @@ const AddCard = ({ min, max, column, setCards, setPlanState }) => {
           </div>
         </>
       ) : (
-        <button
+        <motion.button
+          layout
           onClick={() => setAdding(true)}
           className="flex w-full items-center gap-1.5 p-3 mb-1.5 text-xs text-neutral-400
                      rounded border border-neutral-700 bg-neutral-800  transition-colors hover:text-neutral-50 hover:border-neutral-500"
         >
           <span>Add Plan</span>
           <FiPlus />
-        </button>
+        </motion.button>
       )}
     </>
   );
