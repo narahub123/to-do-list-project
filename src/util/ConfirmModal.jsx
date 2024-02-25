@@ -38,8 +38,8 @@ const ConfirmModal = forwardRef(
       }
     }; // handleCloseBackdrop() ends
 
-    console.log("deleting", isDeleting);
-    console.log("editing", isEditing);
+    // console.log("deleting", isDeleting);
+    // console.log("editing", isEditing);
     // modal
     const handleModal = () => {
       if (isDeleting) {
@@ -54,7 +54,7 @@ const ConfirmModal = forwardRef(
 
     // update
     const handleEdit = (c, setPlanState) => {
-      console.log(c);
+      // console.log(c);
       updateWeeklyToDo(
         c._id,
         c.from,

@@ -80,6 +80,38 @@ const Column = ({
     e.preventDefault();
     setActive(false);
     clearHighlights();
+
+    const cardId = e.dataTransfer.getData("cardId");
+
+    const indicators = getIndicators();
+    const { element } = getNearestIndicator(e, indicators);
+    console.log(element);
+
+    const before = element.dataset.before || "-1";
+
+    if (before !== cardId) {
+      let copy = [...cards];
+
+      let cardToTransfer = copy.find((c) => c._id === cardId);
+
+      if (!cardToTransfer) return;
+
+      cardToTransfer = { ...cardToTransfer, column };
+
+      copy = copy.filter((c) => c.id !== cardId);
+
+      const moveToBack = before === "-1";
+
+      if (moveToBack) {
+        copy.push(cardToTransfer);
+      } else {
+        const insertAtIndex = copy.findIndex((el) => el.id === before);
+        if (insertAtIndex === undefined) return;
+
+        copy.slice(insertAtIndex, 0, cardToTransfer);
+      }
+      setCards(copy);
+    }
   };
 
   const filteredCards = cards.filter((c) => {

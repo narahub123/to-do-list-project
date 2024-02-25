@@ -4,7 +4,7 @@ const baseUrl = "http://localhost:3000";
 
 const getAllWeeklyToDos = (setPlanState) => {
   axios.get(baseUrl).then((data) => {
-    console.log("data ===>", data.data);
+    // console.log("data ===>", data.data);
     let plans = {};
 
     for (const plan of data.data) {
@@ -32,7 +32,7 @@ const getAllWeeklyToDos = (setPlanState) => {
       plans[year][month][week]._id.push(plan._id);
     }
 
-    console.log(plans);
+    // console.log(plans);
 
     setPlanState({
       selectedPlanId: data.data._id,
@@ -62,12 +62,12 @@ const updateWeeklyToDo = (
   description,
   setPlanState
 ) => {
-  console.log(_id, from, to, subject, description, setPlanState);
+  // console.log(_id, from, to, subject, description, setPlanState);
 
   axios
     .patch(`${baseUrl}/update`, { _id, from, to, subject, description })
     .then((data) => {
-      console.log("data", data);
+      // console.log("data", data);
       getAllWeeklyToDos(setPlanState);
     })
     .catch((err) => console.log(err));

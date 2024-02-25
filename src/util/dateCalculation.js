@@ -9,7 +9,7 @@ const formatedMondays = mondays.map((monday) => {
   return monday;
 });
 
-console.log(formatedMondays);
+// console.log(formatedMondays);
 
 const sundays = mondays.map((monday) => {
   let sunday = new Date(monday);
@@ -19,7 +19,7 @@ const sundays = mondays.map((monday) => {
   return sunday;
 });
 
-console.log(sundays);
+// console.log(sundays);
 
 const weeksInMonth = mondays.map((monday) => {
   const date = new Date(monday);
@@ -43,11 +43,11 @@ function getMondaysInMonth(year, month) {
   const mondays = [];
 
   const date = new Date(year, month, 1);
-  console.log("date", date);
+  // console.log("date", date);
 
   while (date.getMonth() === month) {
     if (date.getDay() === 1) {
-      console.log(date);
+      // console.log(date);
       mondays.push(new Date(date));
     }
 
@@ -61,7 +61,7 @@ function getMondaysInMonth(year, month) {
 export function getWeekNumber(date) {
   const dataObject = new Date(date);
   const startOfYear = new Date(dataObject.getFullYear(), 0, 1);
-  console.log(startOfYear);
+  // console.log(startOfYear);
   const diff = dataObject - startOfYear;
   const oneWeek = 1000 * 60 * 60 * 24 * 7;
   const week = Math.floor(diff / oneWeek) + 1;

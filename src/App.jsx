@@ -77,7 +77,7 @@ function App() {
     content = <NoPlanSet onStartAddProject={handleStartAddPlan} />;
   } // if ends
 
-  console.log(planState.plans);
+  // console.log(planState.plans);
   return (
     <>
       <main className="h-screen my-8 flex gap-6">
