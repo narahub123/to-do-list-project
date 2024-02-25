@@ -262,3 +262,6 @@
 
 ### 구분자 하이라이트 
 ![134](https://github.com/narahub123/to-do-list-project/assets/93567002/bac47a18-9721-4617-b156-5455defc0cd3)
+
+### troubleshooting - 일요일에 그 다음주의 컬럼에 하이라이트가 됨 
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/6dac443e-2ea7-4060-8091-2f6bbd5cc5df)
