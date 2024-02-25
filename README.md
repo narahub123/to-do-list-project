@@ -273,3 +273,16 @@
 #### const startOfYear = new Date(dataObject.getFullYear(), 0, 0);
 
 #### -> const startOfYear = new Date(dataObject.getFullYear(), 0, 1);
+
+### 드레그 앤 드롭
+
+#### trouble shooting 1834
+
+#### - 같은 컬럼에서는 이동 가능 - 실제 db랑 연결했을 때는 어떻게 처리해야 할지 생각해야 됨
+
+#### - 다른 컬럼인 경우 이동 안함 - 배열로 봤을 때는 이동을 하지만 실제로는 이동하지 않음
+
+#### - db랑 card에 저장된 정보 다른 것에 대한 처리
+
+![135](https://github.com/narahub123/to-do-list-project/assets/93567002/6a2b6daf-1e73-474b-9d11-2d2aa12e8cd0)
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/7094ef3d-3817-4fa0-8211-f836d89fa836)

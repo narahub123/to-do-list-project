@@ -18,7 +18,7 @@ const Column = ({
   const [active, setActive] = useState(false);
 
   const handleDragStart = (e, card) => {
-    e.dataTransfer.setData("cardId", card._id);
+    e.dataTransfer.setData("cardId", card._id); // drag하는 대상에 cardId라는 데이터를 설정함
   };
 
   const handleDragOver = (e) => {
@@ -81,34 +81,41 @@ const Column = ({
     setActive(false);
     clearHighlights();
 
-    const cardId = e.dataTransfer.getData("cardId");
+    const cardId = e.dataTransfer.getData("cardId"); // 1. 드롭한 객체의 cardId 얻기
 
     const indicators = getIndicators();
     const { element } = getNearestIndicator(e, indicators);
     console.log(element);
 
-    const before = element.dataset.before || "-1";
+    const before = element.dataset.before || "-1"; // 2. create data property of before
 
+    // 3. if before doesn't match cardId
     if (before !== cardId) {
-      let copy = [...cards];
+      let copy = [...cards]; // 3.1 shallow copy of cards
+      console.log("first copy", copy);
 
-      let cardToTransfer = copy.find((c) => c._id === cardId);
+      let cardToTransfer = copy.find((c) => c._id === cardId); // 3.2 find a card which id matches cardId
 
       if (!cardToTransfer) return;
 
-      cardToTransfer = { ...cardToTransfer, column };
+      // console.log(cardToTransfer); // 3.2.1 of cause there is not column
+      // console.log(column);
+      cardToTransfer = { ...cardToTransfer, column }; // 3.3 modify column property to new column
 
-      copy = copy.filter((c) => c.id !== cardId);
+      copy = copy.filter((c) => c._id !== cardId); // 3.4 create a copy of cards array which doesn't contain selected card
 
       const moveToBack = before === "-1";
 
+      // if before is equal to -1
       if (moveToBack) {
-        copy.push(cardToTransfer);
+        copy.push(cardToTransfer); // add selected card at the end of card array
+        // if before is not equal to -1
       } else {
-        const insertAtIndex = copy.findIndex((el) => el.id === before);
+        const insertAtIndex = copy.findIndex((el) => el._id === before); // find the index of before
         if (insertAtIndex === undefined) return;
 
-        copy.slice(insertAtIndex, 0, cardToTransfer);
+        copy.splice(insertAtIndex, 0, cardToTransfer); // insert card at the index of the before
+        console.log("second copy", copy);
       }
       setCards(copy);
     }
