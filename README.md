@@ -274,7 +274,7 @@
 
 #### -> const startOfYear = new Date(dataObject.getFullYear(), 0, 1);
 
-### 드레그 앤 드롭
+### 드래그 앤 드롭
 
 #### trouble shooting 1834
 
