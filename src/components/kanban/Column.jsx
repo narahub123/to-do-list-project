@@ -21,6 +21,21 @@ const Column = ({
     e.dataTransfer.setData("cardId", card._id);
   };
 
+  const handleDragOver = (e) => {
+    e.preventDefault();
+    setActive(true);
+  };
+
+  const handleDragLeave = (e) => {
+    e.preventDefault();
+    setActive(false);
+  };
+
+  const handleDragEnd = (e) => {
+    e.preventDefault();
+    setActive(false);
+  };
+
   const filteredCards = cards.filter((c) => {
     // console.log(getWeekNumber(c.from) === column);
     return getWeekNumber(c.from) === column;
@@ -36,6 +51,9 @@ const Column = ({
         </span>
       </div>
       <div
+        onDragOver={handleDragOver}
+        onDragLeave={handleDragLeave}
+        onDrop={handleDragEnd}
         className={`h-full w-full transition-colors ${
           active ? "bg-neutral-800/50" : "bg-neutral-800/0"
         }`}

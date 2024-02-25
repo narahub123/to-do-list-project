@@ -236,7 +236,7 @@
 
 ### 수정 1113 완료
 
-## Day 6 Crud 완료하기 
+## Day 6 Crud 완료하기
 
 #### db와 연결과 유효성 검사 완료
 
@@ -250,6 +250,12 @@
 
 #### - button className에 outline-0을 추가하니까 없어짐
 
-## Day 7 
-### 모션 추가하기 
+## Day 7
+
+### 모션 추가하기
+
 ![132](https://github.com/narahub123/to-do-list-project/assets/93567002/442550c7-041d-4efe-b739-9ed44ddeccfd)
+
+### 컬럼 하이라이트 - draggable
+
+![133](https://github.com/narahub123/to-do-list-project/assets/93567002/fad77e2b-1786-4ace-bdb0-790e52d3d8b6)
