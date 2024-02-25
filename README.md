@@ -259,3 +259,6 @@
 ### 컬럼 하이라이트 - draggable
 
 ![133](https://github.com/narahub123/to-do-list-project/assets/93567002/fad77e2b-1786-4ace-bdb0-790e52d3d8b6)
+
+### 구분자 하이라이트 
+![134](https://github.com/narahub123/to-do-list-project/assets/93567002/bac47a18-9721-4617-b156-5455defc0cd3)
