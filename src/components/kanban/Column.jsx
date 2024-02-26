@@ -17,11 +17,57 @@ const Column = ({
 }) => {
   const [active, setActive] = useState(false);
 
-  const filteredCards = cards.filter((c) => {
-    // console.log(getWeekNumber(c.from) === column);
-    // console.log(c._id);
+  // const filteredCards = cards.filter((c) => {
+  //   // console.log(getWeekNumber(c.from) === column);
+  //   // console.log(c._id);
+  //   return getWeekNumber(c.from) === column;
+  // });
+
+  let filteredCards = cards.filter((c) => {
     return getWeekNumber(c.from) === column;
   });
+
+  filteredCards = sortCards(filteredCards);
+
+  function sortCards(filteredCards) {
+    const sortedCards = [];
+
+    // 이미 정렬된 카드를 확인하기 위한 객체
+    const visited = {};
+
+    // 각 카드에 대해 정렬 수행
+    filteredCards.forEach((current) => {
+      // 현재 카드를 이미 방문했는지 확인
+      if (!visited[current._id]) {
+        // 방문하지 않았다면, 정렬 수행
+        visit(current, sortedCards, visited);
+      }
+    });
+
+    return sortedCards;
+  }
+
+  // DFS를 사용하여 카드를 방문하고 정렬된 배열에 추가
+  function visit(card, sortedCards, visited) {
+    if (!card) return;
+
+    // 현재 카드를 이미 방문했다면 종료
+    if (visited[card._id]) return;
+
+    // 현재 카드의 다음 카드를 방문
+    visit(getById(card.next), sortedCards, visited);
+
+    // 현재 카드를 정렬된 배열에 추가
+    sortedCards.push(card);
+
+    // 현재 카드를 방문했음을 표시
+    visited[card._id] = true;
+  }
+
+  // ID를 사용하여 카드를 찾는 함수
+  function getById(id) {
+    return filteredCards.find((card) => card._id === id) || null;
+  }
 
   const handleDragStart = (e, card) => {
     e.dataTransfer.setData("cardId", card._id); // drag하는 대상에 cardId라는 데이터를 설정함
