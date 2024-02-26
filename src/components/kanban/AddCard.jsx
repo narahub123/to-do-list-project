@@ -9,7 +9,14 @@ import ValidationModal from "../../util/ValidationModal";
 import { saveWeeklyToDo } from "../../util/HandleAPI";
 import { motion } from "framer-motion";
 
-const AddCard = ({ min, max, column, setCards, setPlanState }) => {
+const AddCard = ({
+  min,
+  max,
+  column,
+  setCards,
+  setPlanState,
+  getNearestCard,
+}) => {
   // const [text, setText] = useState("");
   const [adding, setAdding] = useState(false);
 
@@ -34,13 +41,23 @@ const AddCard = ({ min, max, column, setCards, setPlanState }) => {
   // console.log(min, max);
 
   const handleSave = () => {
+    // get the n
+    let before = null;
+    if (getNearestCard()) {
+      before = getNearestCard()._id;
+    }
+
+    console.log(before);
+
+    // console.log("cardId", cardId);
+
     const enteredTo = formatDateAndTime(new Date(to.current.value));
     const enteredFrom = formatDateAndTime(new Date(from.current.value));
     const enteredSubject = subject.current.value;
     const enteredDescription = description.current.value;
 
-    console.log("지금값", enteredFrom);
-    console.log("지금값", enteredTo);
+    // console.log("지금값", enteredFrom);
+    // console.log("지금값", enteredTo);
 
     // empty value validation
     if (
@@ -84,6 +101,7 @@ const AddCard = ({ min, max, column, setCards, setPlanState }) => {
       subject: enteredSubject,
       description: enteredDescription,
       setPlanState,
+      before: before,
     });
 
     setAdding(false);
@@ -201,7 +219,9 @@ const AddCard = ({ min, max, column, setCards, setPlanState }) => {
       ) : (
         <motion.button
           layout
-          onClick={() => setAdding(true)}
+          onClick={() => {
+            setAdding(true);
+          }}
           className="flex w-full items-center gap-1.5 p-3 mb-1.5 text-xs text-neutral-400
                      rounded border border-neutral-700 bg-neutral-800  transition-colors hover:text-neutral-50 hover:border-neutral-500"
         >

@@ -17,6 +17,12 @@ const Column = ({
 }) => {
   const [active, setActive] = useState(false);
 
+  const filteredCards = cards.filter((c) => {
+    // console.log(getWeekNumber(c.from) === column);
+    // console.log(c._id);
+    return getWeekNumber(c.from) === column;
+  });
+
   const handleDragStart = (e, card) => {
     e.dataTransfer.setData("cardId", card._id); // drag하는 대상에 cardId라는 데이터를 설정함
   };
@@ -43,11 +49,20 @@ const Column = ({
     });
   };
 
+  // find a nearestCard from add card component
+  const getNearestCard = () => {
+    console.log("last", filteredCards[filteredCards.length - 1]);
+
+    return filteredCards[filteredCards.length - 1];
+  };
+
   const getNearestIndicator = (e, indicators) => {
     const DISTANCE_OFFSET = 50;
 
     const el = indicators.reduce(
       (closest, child) => {
+        // console.log("child", child);
+        console.log(closest);
         const box = child.getBoundingClientRect();
         const offset = e.clientY - (box.top + DISTANCE_OFFSET);
 
@@ -62,7 +77,7 @@ const Column = ({
         element: indicators[indicators.length - 1],
       }
     );
-
+    console.log("el", el);
     return el;
   };
 
@@ -121,11 +136,6 @@ const Column = ({
     }
   };
 
-  const filteredCards = cards.filter((c) => {
-    // console.log(getWeekNumber(c.from) === column);
-    return getWeekNumber(c.from) === column;
-  });
-
   // console.log("filteredCards", filteredCards);
   return (
     <div className="w-56 shrink-0">
@@ -162,6 +172,7 @@ const Column = ({
           min={min}
           max={max}
           setPlanState={setPlanState}
+          getNearestCard={getNearestCard}
         />
         {filteredCards.length > 0 && (
           <TrashBin setCards={setCards} setPlanState={setPlanState} />

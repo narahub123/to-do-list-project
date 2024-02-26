@@ -43,10 +43,17 @@ const getAllWeeklyToDos = (setPlanState) => {
   });
 };
 
-const saveWeeklyToDo = ({ from, to, subject, description, setPlanState }) => {
-  console.log(from, to, subject, description, setPlanState);
+const saveWeeklyToDo = ({
+  from,
+  to,
+  subject,
+  description,
+  setPlanState,
+  before,
+}) => {
+  console.log(from, to, subject, description, setPlanState, before);
   axios
-    .post(`${baseUrl}/save`, { from, to, subject, description })
+    .post(`${baseUrl}/save`, { from, to, subject, description, before })
     .then((data) => {
       console.log(data);
       getAllWeeklyToDos(setPlanState);
