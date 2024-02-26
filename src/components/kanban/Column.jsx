@@ -99,7 +99,7 @@ const Column = ({
       if (!cardToTransfer) return;
 
       // console.log(cardToTransfer); // 3.2.1 of cause there is not column
-      console.log(column);
+      // console.log(column);
       cardToTransfer = { ...cardToTransfer, column }; // 3.3 modify column property to new column
 
       copy = copy.filter((c) => c._id !== cardId); // 3.4 create a copy of cards array which doesn't contain selected card
@@ -115,7 +115,7 @@ const Column = ({
         if (insertAtIndex === undefined) return;
 
         copy.splice(insertAtIndex, 0, cardToTransfer); // insert card at the index of the before
-        console.log("second copy", copy);
+        console.log("second", copy);
       }
       setCards(copy);
     }
