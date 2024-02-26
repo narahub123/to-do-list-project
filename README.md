@@ -286,3 +286,7 @@
 
 ![135](https://github.com/narahub123/to-do-list-project/assets/93567002/6a2b6daf-1e73-474b-9d11-2d2aa12e8cd0)
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/7094ef3d-3817-4fa0-8211-f836d89fa836)
+
+## Day 8 링크드 리스트 적용 
+#### 새 일정 등록시 add card 컴포넌트 바로 위의 card의 id를 받아온 후 생성된 카드의 id를 next 속성에 넣어줌 
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/83d01f83-919c-4ced-97b4-c3db7b1a5d28)
