@@ -299,6 +299,11 @@
 
 #### 라우터 적용
 
+#### 참조 사이트
+
+[![router](https://img.youtube.com/vi/IathdVB65Lw/0.jpg)](https://www.youtube.com/watch?v=IathdVB65Lw)
+[![effect](https://img.youtube.com/vi/NFrFhBJPTmI/0.jpg)](https://www.youtube.com/watch?v=NFrFhBJPTmI)
+
 ### 페이지 분배
 
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/247091a4-bae4-4e11-9257-49b148797716)
@@ -309,22 +314,28 @@
 
 ![151](https://github.com/narahub123/to-do-list-project/assets/93567002/b6d5f44b-52d4-46aa-8df4-4741102fbd6d)
 
-
 ### 사이드바 레이아웃
+
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/2df0523f-2140-423b-b9de-2974f95cfc56)
 
-### SidebarItem component 생성 
-#### 재사용가능한 컴포넌트 생성 
-#### 기존과 레이아웃이 동일함 확인 완료 
+### SidebarItem component 생성
+
+#### 재사용가능한 컴포넌트 생성
+
+#### 기존과 레이아웃이 동일함 확인 완료
 
 ### 사이드바 스타일링
+
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/fbae84b6-34ef-4742-9526-0e98de3f807e)
 
-### active 
+### active
+
 ![152](https://github.com/narahub123/to-do-list-project/assets/93567002/9d78126c-1fee-4bcc-8939-67a25f3b4e28)
 
-### 토글 
+### 토글
+
 ![153](https://github.com/narahub123/to-do-list-project/assets/93567002/395c2fbe-caaa-44ef-b269-0f6a7af21828)
 
 ### 플로팅 레이블
+
 ![154](https://github.com/narahub123/to-do-list-project/assets/93567002/cd1b77df-de5a-40fa-87ee-da6c3961dc3e)
