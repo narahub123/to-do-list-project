@@ -44,10 +44,10 @@ const Sidebar = ({ children }) => {
     <div className="container flex">
       <aside className="sidebar h-screen">
         <menu className="menu h-full flex flex-col  bg-white border-r shadow-sm ">
-          <section className="top-section p-4 pb-2 flex justify-between items-center">
+          <section className="top-section p-4  pb-2 flex justify-between items-center">
             <div
               className={`head flex justify-center items-center overflow-hidden transition-all ${
-                expanded ? "w-40" : "w-0"
+                expanded ? "w-40 pl-2" : "w-0"
               }`}
             >
               <BsListCheck className="logo mt-0.5" size={20} />
