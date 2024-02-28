@@ -9,10 +9,11 @@ import { LuChevronFirst } from "react-icons/lu";
 import { LuSettings } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa";
 import { FiMoreVertical } from "react-icons/fi";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import SidebarItem from "./SidebarItem";
 
 const Sidebar = ({ children }) => {
+  const location = useLocation();
   const menuItem = [
     {
       path: "/",
@@ -52,7 +53,11 @@ const Sidebar = ({ children }) => {
           <nav className="menus h-full">
             {menuItem.map((item, index) => (
               <NavLink to={item.path} key={index} className="item-link">
-                <SidebarItem icon={item.icon} name={item.name} />
+                <SidebarItem
+                  icon={item.icon}
+                  name={item.name}
+                  active={location.pathname === item.path}
+                />
               </NavLink>
             ))}
           </nav>
