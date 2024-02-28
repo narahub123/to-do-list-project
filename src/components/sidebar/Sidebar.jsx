@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BsCalendarMonth,
   BsCalendarWeek,
@@ -14,6 +14,8 @@ import SidebarItem from "./SidebarItem";
 
 const Sidebar = ({ children }) => {
   const location = useLocation();
+  const [alert, setAlert] = useState(true);
+
   const menuItem = [
     {
       path: "/",
@@ -57,6 +59,7 @@ const Sidebar = ({ children }) => {
                   icon={item.icon}
                   name={item.name}
                   active={location.pathname === item.path}
+                  alert={alert}
                 />
               </NavLink>
             ))}
