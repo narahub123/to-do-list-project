@@ -312,3 +312,10 @@
 
 ### 사이드바 레이아웃
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/2df0523f-2140-423b-b9de-2974f95cfc56)
+
+### SidebarItem component 생성 
+#### 재사용가능한 컴포넌트 생성 
+#### 기존과 레이아웃이 동일함 확인 완료 
+
+### 사이드바 스타일링
+

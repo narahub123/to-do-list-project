@@ -10,6 +10,7 @@ import { LuSettings } from "react-icons/lu";
 import { FaRegUser } from "react-icons/fa";
 import { FiMoreVertical } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
+import SidebarItem from "./SidebarItem";
 
 const Sidebar = ({ children }) => {
   const menuItem = [
@@ -51,8 +52,7 @@ const Sidebar = ({ children }) => {
           <nav className="menus">
             {menuItem.map((item, index) => (
               <NavLink to={item.path} key={index} className="item-link">
-                <div className="icon">{item.icon}</div>
-                <div className="link-text">{item.name}</div>
+                <SidebarItem icon={item.icon} name={item.name} />
               </NavLink>
             ))}
           </nav>
