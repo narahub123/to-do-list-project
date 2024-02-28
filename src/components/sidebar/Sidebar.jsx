@@ -15,8 +15,8 @@ import SidebarItem from "./SidebarItem";
 const SidebarContext = createContext();
 const Sidebar = ({ children }) => {
   const location = useLocation();
-  const [alert, setAlert] = useState(true);
-  const [expanded, setExpanded] = useState(true);
+  const [alert, setAlert] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const menuItem = [
     {

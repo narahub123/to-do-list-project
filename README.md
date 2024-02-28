@@ -325,3 +325,6 @@
 
 ### 토글 
 ![153](https://github.com/narahub123/to-do-list-project/assets/93567002/395c2fbe-caaa-44ef-b269-0f6a7af21828)
+
+### 플로팅 레이블
+![154](https://github.com/narahub123/to-do-list-project/assets/93567002/cd1b77df-de5a-40fa-87ee-da6c3961dc3e)
