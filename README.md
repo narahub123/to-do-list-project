@@ -318,4 +318,5 @@
 #### 기존과 레이아웃이 동일함 확인 완료 
 
 ### 사이드바 스타일링
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/fbae84b6-34ef-4742-9526-0e98de3f807e)
 

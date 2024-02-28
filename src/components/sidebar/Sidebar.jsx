@@ -36,20 +36,20 @@ const Sidebar = ({ children }) => {
     },
   ];
   return (
-    <div className="container">
-      <aside className="sidebar">
-        <menu className="menu">
-          <section className="top-section">
-            <div className="head">
-              <BsListCheck className="logo" />
-              <h1 className="title">To Do list</h1>
+    <div className="container flex">
+      <aside className="sidebar h-screen">
+        <menu className="menu h-full flex flex-col  bg-white border-r shadow-sm ">
+          <section className="top-section p-4 pb-2 flex justify-between items-center">
+            <div className="head flex align-center items-center ">
+              <BsListCheck className="logo mr-2" />
+              <h1 className="title text-sm h-5 w-44 ml-1">To Do list</h1>
             </div>
-            <button className="toggle">
-              <LuChevronFirst className="toggle-button" />
+            <button className="toggle p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100">
+              <LuChevronFirst className="toggle-button" size={20} />
             </button>
           </section>
 
-          <nav className="menus">
+          <nav className="menus h-full">
             {menuItem.map((item, index) => (
               <NavLink to={item.path} key={index} className="item-link">
                 <SidebarItem icon={item.icon} name={item.name} />
@@ -57,14 +57,16 @@ const Sidebar = ({ children }) => {
             ))}
           </nav>
 
-          <section className="bottom-section">
-            <FaRegUser className="user-icon" />
-            <div className="user-container">
-              <div className="user-info">
-                <h4 className="username">John Doe</h4>
-                <span className="useremail">johndoe@gmail.com</span>
-                <FiMoreVertical />
+          <section className="bottom-section border-t flex p-3">
+            <FaRegUser className="user-icon w-10 h-10" />
+            <div className="user-container flex justify-between items-center w-48 ml-3">
+              <div className="user-info leading-4">
+                <h4 className="username font-semibold">John Doe</h4>
+                <span className="useremail text-xs text-gray-600">
+                  johndoe@gmail.com
+                </span>
               </div>
+              <FiMoreVertical size={20} />
             </div>
           </section>
         </menu>
