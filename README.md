@@ -294,3 +294,10 @@
 #### 새 일정 등록시 add card 컴포넌트 바로 위의 card의 id를 받아온 후 생성된 카드의 id를 next 속성에 넣어줌
 
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/83d01f83-919c-4ced-97b4-c3db7b1a5d28)
+
+## Day 9 사이드바 디자인 변경
+
+#### 라우터 적용
+
+### 페이지 분배
+![image](https://github.com/narahub123/to-do-list-project/assets/93567002/247091a4-bae4-4e11-9257-49b148797716)
