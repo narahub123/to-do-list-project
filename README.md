@@ -301,7 +301,12 @@
 
 #### 참조 사이트
 
+#### 라우터 관련
+
 [![router](https://img.youtube.com/vi/IathdVB65Lw/0.jpg)](https://www.youtube.com/watch?v=IathdVB65Lw)
+
+#### 디자인 관련
+
 [![effect](https://img.youtube.com/vi/NFrFhBJPTmI/0.jpg)](https://www.youtube.com/watch?v=NFrFhBJPTmI)
 
 ### 페이지 분배
