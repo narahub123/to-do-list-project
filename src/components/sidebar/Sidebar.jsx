@@ -17,22 +17,22 @@ const Sidebar = ({ children }) => {
     {
       path: "/",
       name: "monthly",
-      icon: <BsCalendarMonth />,
+      icon: <BsCalendarMonth size={20} />,
     },
     {
       path: "/weekly",
       name: "weekly",
-      icon: <BsCalendarWeek />,
+      icon: <BsCalendarWeek size={20} />,
     },
     {
       path: "/daily",
       name: "daily",
-      icon: <BsCalendarDate />,
+      icon: <BsCalendarDate size={20} />,
     },
     {
       path: "/settings",
       name: "settings",
-      icon: <LuSettings />,
+      icon: <LuSettings size={20} />,
     },
   ];
   return (
@@ -40,11 +40,11 @@ const Sidebar = ({ children }) => {
       <aside className="sidebar h-screen">
         <menu className="menu h-full flex flex-col  bg-white border-r shadow-sm ">
           <section className="top-section p-4 pb-2 flex justify-between items-center">
-            <div className="head flex align-center items-center ">
-              <BsListCheck className="logo mr-2" />
-              <h1 className="title text-sm h-5 w-44 ml-1">To Do list</h1>
+            <div className="head flex justify-center items-center ">
+              <BsListCheck className="logo mt-0.5" size={20} />
+              <h1 className="title text-xl  w-40 ml-3 ">To Do list</h1>
             </div>
-            <button className="toggle p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100">
+            <button className="toggle rounded-lg bg-gray-50 hover:bg-gray-100">
               <LuChevronFirst className="toggle-button" size={20} />
             </button>
           </section>
@@ -59,7 +59,7 @@ const Sidebar = ({ children }) => {
 
           <section className="bottom-section border-t flex p-3">
             <FaRegUser className="user-icon w-10 h-10" />
-            <div className="user-container flex justify-between items-center w-48 ml-3">
+            <div className="user-container flex justify-between items-center ml-3 w-40">
               <div className="user-info leading-4">
                 <h4 className="username font-semibold">John Doe</h4>
                 <span className="useremail text-xs text-gray-600">
