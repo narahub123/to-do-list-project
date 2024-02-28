@@ -300,4 +300,11 @@
 #### 라우터 적용
 
 ### 페이지 분배
+
 ![image](https://github.com/narahub123/to-do-list-project/assets/93567002/247091a4-bae4-4e11-9257-49b148797716)
+
+### 라우터 설정
+
+#### react-router-dom 이용
+
+![151](https://github.com/narahub123/to-do-list-project/assets/93567002/b6d5f44b-52d4-46aa-8df4-4741102fbd6d)
