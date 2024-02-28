@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
+import { SidebarContext } from "./Sidebar";
 
 const SidebarItem = ({ icon, name, active, alert }) => {
+  const { expanded } = useContext(SidebarContext);
   return (
     <li
       className={`item relative flex items-center justify-center py-2 px-3 my-1 font-medium rounded-md cursor-pointer
@@ -12,9 +14,19 @@ const SidebarItem = ({ icon, name, active, alert }) => {
         `}
     >
       {icon}
-      <span className="name w-44 ml-3">{name}</span>
+      <span
+        className={`name overflow-hidden transition-all ${
+          expanded ? "w-40 ml-3" : "w-0"
+        }`}
+      >
+        {name}
+      </span>
       {alert && (
-        <div className={`absolute right-7 w-2 h-2 rounded bg-indigo-400`} />
+        <div
+          className={`absolute right-7 w-2 h-2 rounded bg-indigo-400 ${
+            expanded ? "" : "top-1 right-3.5"
+          }`}
+        />
       )}
     </li>
   );
